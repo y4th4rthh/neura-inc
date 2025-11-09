@@ -1,6 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Header from "@/components/header"
+import Footer from "@/components/footer"
 
 export default function DemoPage() {
   const [isLoading, setIsLoading] = useState(true)
@@ -14,22 +16,7 @@ export default function DemoPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b border-border bg-card">
-        <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500">
-                <span className="text-xl font-bold text-white">⚡</span>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-foreground">Neura.ai</h1>
-                <p className="text-xs text-muted-foreground">Try it now</p>
-              </div>
-            </div>
-            <p className="text-sm text-muted-foreground">neura.essence1.o</p>
-          </div>
-        </div>
-      </header>
+       <Header />
 
       {/* Main Content */}
       <main className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
@@ -81,6 +68,8 @@ export default function DemoPage() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   )
 }
+
