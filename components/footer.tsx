@@ -66,8 +66,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://github.com/y4th4rthh/neura.ai-releases" className="hover:text-primary transition">
-                  Support
+                <a href="https://github.com/y4th4rthh/neura.ai-releases/releases" className="hover:text-primary transition">
+                  Release Notes
                 </a>
               </li>
             </ul>
