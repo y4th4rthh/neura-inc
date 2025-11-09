@@ -73,6 +73,9 @@ export default function Header() {
           <Link href="#tools" className="block text-foreground hover:text-primary">
             Tools
           </Link>
+          <Link href="/demo" className="text-foreground hover:text-primary transition">
+            Try it?
+          </Link>
          
         </div>
       )}
