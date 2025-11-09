@@ -13,7 +13,20 @@ export default function Footer() {
               <div className="w-8 h-8 p-2 bg-primary rounded-lg flex items-center justify-center">
                 <Zap/>
               </div>
-              <span>Neura.ai</span>
+              <span
+  style={{
+    WebkitTextFillColor: 'transparent',
+    background: 'linear-gradient(135deg, #fff, #ff6b00)',
+    WebkitBackgroundClip: 'text',
+    backgroundClip: 'text',
+    fontSize: '24px',
+    fontWeight: 700,
+    margin: 0
+  }}
+>
+  Neura.ai
+</span>
+
             </div>
             <p className="text-sm text-muted-foreground">Advanced AI platform for productivity and innovation</p>
           </div>
