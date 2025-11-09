@@ -56,17 +56,17 @@ export default function Footer() {
             <h4 className="font-semibold text-foreground mb-4">Resources</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-primary transition">
+                <a href="https://github.com/y4th4rthh/neura.ai-releases" className="hover:text-primary transition">
                   Documentation
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition">
+                <a href="https://react.dev/" className="hover:text-primary transition">
                   API Reference
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition">
+                <a href="https://github.com/y4th4rthh/neura.ai-releases" className="hover:text-primary transition">
                   Support
                 </a>
               </li>
@@ -77,17 +77,17 @@ export default function Footer() {
             <h4 className="font-semibold text-foreground mb-4">Legal</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-primary transition">
+                <a href="https://www.mongodb.com/products" className="hover:text-primary transition">
                   Privacy
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition">
+                <a href="https://github.com/y4th4rthh/neura.ai-releases" className="hover:text-primary transition">
                   Terms
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition">
+                <a href="https://github.com/y4th4rthh/neura.ai-releases" className="hover:text-primary transition">
                   Contact
                 </a>
               </li>
@@ -98,14 +98,11 @@ export default function Footer() {
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
           <p>&copy; 2025 Neura.ai. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-primary transition">
-              Twitter
-            </a>
-            <a href="#" className="hover:text-primary transition">
+            <a href="https://github.com/y4th4rthh/neura.ai-releases" className="hover:text-primary transition">
               GitHub
             </a>
-            <a href="#" className="hover:text-primary transition">
-              Discord
+            <a href="https://neura-ai.netlify.app/" className="hover:text-primary transition">
+              Neura.ai
             </a>
           </div>
         </div>
