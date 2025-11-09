@@ -16,7 +16,20 @@ export default function Header() {
           <div className="w-8 h-8 p-2 bg-primary rounded-lg flex items-center justify-center">
             <Zap/>
           </div>
-          <span className="text-foreground">Neura.ai</span>
+         <span
+  style={{
+    WebkitTextFillColor: 'transparent',
+    background: 'linear-gradient(135deg, #fff, #ff6b00)',
+    WebkitBackgroundClip: 'text',
+    backgroundClip: 'text',
+    fontSize: '24px',
+    fontWeight: 700,
+    margin: 0
+  }}
+>
+  Neura.ai
+</span>
+
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
