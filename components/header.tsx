@@ -45,6 +45,9 @@ export default function Header() {
           <Link href="#tools" className="text-foreground hover:text-primary transition">
             Tools
           </Link>
+          <Link href="/demo" className="text-foreground hover:text-primary transition">
+            Try it?
+          </Link>
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
