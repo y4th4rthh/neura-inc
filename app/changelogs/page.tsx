@@ -5,6 +5,8 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { Spinner } from "@/components/ui/spinner"
+import Header from "@/components/header"
+import Footer from "@/components/footer"
 import Link from "next/link"
 import type { JSX } from "react/jsx-runtime"
 
@@ -202,6 +204,7 @@ export default function ChangelogsPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
+      <Header/>
       <header className="mt-4">
         <div className="mx-auto max-w-4xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-2">
@@ -311,6 +314,7 @@ export default function ChangelogsPage() {
           </div>
         )}
       </main>
+      <Footer/>
     </div>
   )
 }
