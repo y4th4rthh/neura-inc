@@ -27,6 +27,27 @@ export default function DemoPage() {
           </p>
         </div>
 
+         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+            <a
+              href="https://github.com/y4th4rthh/neura.ai-releases/releases/download/v10.7/neura.ai.10.7.exe"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                Download for Windows
+              </Button>
+            </a>
+            <a
+              href="https://neura-ai.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            <Button size="lg" variant="outline" className="border-border hover:bg-muted bg-transparent">
+              Visit Neura.ai
+            </Button>
+            </a>
+          </div>
+
         {/* Embedded Tool Container */}
         <div className="relative overflow-hidden rounded-xl border border-border bg-card shadow-lg">
           {/* Loading State */}
@@ -72,4 +93,5 @@ export default function DemoPage() {
     </div>
   )
 }
+
 
