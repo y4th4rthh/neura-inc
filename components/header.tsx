@@ -39,14 +39,14 @@ export default function Header() {
           <Link href="/explore" className="text-foreground hover:text-primary transition">
             Explore
           </Link>
-          <Link href="#features" className="text-foreground hover:text-primary transition">
-            Features
-          </Link>
           <Link href="/changelogs" className="text-foreground hover:text-primary transition">
             Changelogs
           </Link>
           <Link href="/demo" className="text-foreground hover:text-primary transition">
             Try it?
+          </Link>
+          <Link href="/contact-us" className="text-foreground hover:text-primary transition">
+            Contact Us
           </Link>
         </nav>
 
@@ -67,14 +67,14 @@ export default function Header() {
           <Link href="/explore" className="block text-foreground hover:text-primary">
             Explore
           </Link>
-          <Link href="#features" className="block text-foreground hover:text-primary">
-            Features
-          </Link>
-          <Link href="#tools" className="block text-foreground hover:text-primary">
-            Tools
+          <Link href="/changelogs" className="block text-foreground hover:text-primary">
+            Changelogs
           </Link>
           <Link href="/demo" className="text-foreground hover:text-primary transition">
             Try it?
+          </Link>
+          <Link href="/contact-us" className="text-foreground hover:text-primary transition">
+            Contact Us
           </Link>
          
         </div>
