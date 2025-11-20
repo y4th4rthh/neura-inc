@@ -30,7 +30,7 @@ export default function DemoPage() {
 
          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6 pb-6">
             <a
-              href="https://github.com/y4th4rthh/neura.ai-releases/releases/download/v10.7/neura.ai.10.7.exe"
+              href="https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.ai.exe"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -94,6 +94,7 @@ export default function DemoPage() {
     </div>
   )
 }
+
 
 
 
