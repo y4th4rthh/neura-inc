@@ -23,7 +23,7 @@ export default function ExploreHero() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
             <a
-              href="https://github.com/y4th4rthh/neura.ai-releases/releases/download/v10.7/neura.explore.exe"
+              href="https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.explore.exe"
               target="_blank"
               rel="noopener noreferrer"
             >
