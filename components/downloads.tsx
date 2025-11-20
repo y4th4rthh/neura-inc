@@ -13,11 +13,11 @@ export default function Downloads() {
       items: [
         {
           label: "Windows (.exe)",
-          url: "https://github.com/y4th4rthh/neura.ai-releases/releases/download/v10.7/neura.ai.10.7.exe",
+          url: "https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.ai.exe",
         },
         {
           label: "Android (.apk)",
-          url: "https://github.com/y4th4rthh/neura.ai-releases/releases/download/v10.7/neura.ai.10.7.apk",
+          url: "https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.ai.apk",
         },
         { label: "Web App", url: "https://neura-ai.netlify.app" },
       ],
@@ -29,7 +29,7 @@ export default function Downloads() {
       items: [
         {
           label: "Windows (.exe)",
-          url: "https://github.com/y4th4rthh/neura.ai-releases/releases/download/v10.7/neura.explore.exe",
+          url: "https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.explore.exe",
         },
       ],
     },
