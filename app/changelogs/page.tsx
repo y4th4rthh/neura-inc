@@ -201,6 +201,20 @@ export default function ChangelogsPage() {
     return parts.length > 0 ? parts : text
   }
 
+  const isLessThan = (v, target) => {
+  const normalize = (s) =>
+    s.replace(/^v/i, "").split(".").map(Number)
+
+  const a = normalize(v)
+  const b = normalize(target)
+
+  for (let i = 0; i < Math.max(a.length, b.length); i++) {
+    const diff = (a[i] || 0) - (b[i] || 0)
+    if (diff !== 0) return diff < 0
+  }
+  return false
+}
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -246,9 +260,17 @@ export default function ChangelogsPage() {
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
                           <CardTitle className="text-2xl">{release.name || release.tag_name}</CardTitle>
-                          <Badge variant={release.prerelease ? "secondary" : "default"}>
+                          {/* <Badge variant={release.prerelease ? "secondary" : "default"}>
                             {release.prerelease ? "Pre-release" : "Release"}
-                          </Badge>
+                          </Badge> */}
+
+                           {isLessThan(release.tag_name, "v10.4") ? (
+    <Badge variant="default">Obsolete</Badge>
+  ) : (
+    <Badge variant={release.prerelease ? "secondary" : "default"}>
+      {release.prerelease ? "Pre-release" : "Release"}
+    </Badge>
+  )}
                         </div>
                         <CardDescription className="text-base">
                           <code className="px-2 py-1 rounded bg-muted text-muted-foreground">{release.tag_name}</code>
