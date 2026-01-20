@@ -20,7 +20,7 @@ export default function Footer() {
     WebkitBackgroundClip: 'text',
     backgroundClip: 'text',
     fontSize: '24px',
-    fontWeight: 700,
+    fontWeight: 500,
     margin: 0
   }}
 >
