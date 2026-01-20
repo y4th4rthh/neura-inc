@@ -201,19 +201,25 @@ export default function ChangelogsPage() {
     return parts.length > 0 ? parts : text
   }
 
-  const isLessThan = (v, target) => {
-  const normalize = (s) =>
-    s.replace(/^v/i, "").split(".").map(Number)
+  const isLessThan = (v: any, target: any): any => {
+  const normalize = (s: any): any => {
+    return s
+      .replace(/^v/i, "")
+      .split(".")
+      .map((x: any) => Number(x))
+  }
 
-  const a = normalize(v)
-  const b = normalize(target)
+  const a: any = normalize(v)
+  const b: any = normalize(target)
 
-  for (let i = 0; i < Math.max(a.length, b.length); i++) {
-    const diff = (a[i] || 0) - (b[i] || 0)
+  for (let i: any = 0; i < Math.max(a.length, b.length); i++) {
+    const diff: any = (a[i] || 0) - (b[i] || 0)
     if (diff !== 0) return diff < 0
   }
+
   return false
 }
+
 
   return (
     <div className="min-h-screen bg-background">
