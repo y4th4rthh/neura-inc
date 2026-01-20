@@ -271,7 +271,7 @@ export default function ChangelogsPage() {
                           </Badge> */}
 
                            {isLessThan(release.tag_name, "v10.4") ? (
-    <Badge variant="default">Obsolete</Badge>
+    <Badge variant="destructive">Deprecated</Badge>
   ) : (
     <Badge variant={release.prerelease ? "secondary" : "default"}>
       {release.prerelease ? "Pre-release" : "Release"}
