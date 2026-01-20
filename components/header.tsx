@@ -13,7 +13,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 font-bold text-xl">
-          <div className="w-8 h-8 p-2 bg-gradient-to-br from-[#ff6b00] to-[#ff8c42] rounded-xl flex items-center justify-center">
+          <div className="w-8 h-8 p-2 bg-gradient-to-br from-[#ff6b00] to-[#ff8c42] rounded-lg flex items-center justify-center">
             <Zap/>
           </div>
          <span
