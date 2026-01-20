@@ -11,7 +11,7 @@ export default function Hero() {
 
       <div className="container mx-auto max-w-4xl relative z-10">
         <div className="text-center space-y-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-2xl">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#ff6b00] to-[#ff8c42] rounded-2xl">
             <span ><Zap size={36}/></span>
           </div>
 
