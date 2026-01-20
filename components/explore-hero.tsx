@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import {Globe} from "lucide-react"
+import {Atom} from "lucide-react"
 
 export default function ExploreHero() {
   return (
@@ -11,7 +11,7 @@ export default function ExploreHero() {
       <div className="container mx-auto max-w-4xl relative z-10">
         <div className="text-center space-y-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-2xl">
-            <span className="text-6xl"><Globe size={36}/></span>
+            <span className="text-6xl"><Atom size={36}/></span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">Neura Explore</h1>
