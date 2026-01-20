@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 font-bold text-lg mb-4">
-              <div className="w-8 h-8 p-2 bg-gradient-to-br from-[#ff6b00] to-[#ff8c42] rounded-xl flex items-center justify-center">
+              <div className="w-8 h-8 p-2 bg-gradient-to-br from-[#ff6b00] to-[#ff8c42] rounded-lg flex items-center justify-center">
                 <Zap/>
               </div>
               <span
