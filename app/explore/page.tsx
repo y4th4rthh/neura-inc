@@ -8,10 +8,8 @@ import Footer from "@/components/footer"
 export default function ExplorePage() {
   return (
     <main className="min-h-screen bg-background">
-      <Header />
       <ExploreHero />
       <ExploreFeatures />
-      <Footer />
     </main>
   )
 }
