@@ -44,6 +44,14 @@ code, pre {
   font-family: var(--font-mono);
 }
 
+.scrollbar-hide {
+  -ms-overflow-style: none;     /* IE & Edge */
+  scrollbar-width: none;        /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
+}
 
 .dark {
   --background: oklch(0.145 0 0);
