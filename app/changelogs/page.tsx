@@ -309,7 +309,7 @@ export default function ChangelogsPage() {
                               href={asset.browser_download_url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="flex items-center justify-between rounded-lg border border-border bg-card p-3 hover:bg-muted transition-colors group"
+                              className="flex items-center justify-between rounded-lg border border-border bg-[#121212] p-3 hover:bg-muted transition-colors group"
                             >
                               <div className="flex items-center gap-2 flex-1 min-w-0">
                                 <span className="text-lg">📦</span>
