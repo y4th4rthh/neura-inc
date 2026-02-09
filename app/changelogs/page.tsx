@@ -220,7 +220,12 @@ export default function ChangelogsPage() {
 
 
   return (
-    <div className="min-h-screen bg-[#1a1a1a]">
+    <div className="min-h-screen bg-[#1a1a1a]"
+       style={{
+    scrollbarWidth: "thin",
+    scrollbarColor: "#444 #1a1a1a"
+  }}
+      >
       {/* Header */}
       <header className="mt-4">
         <div className="mx-auto max-w-4xl px-4 py-6 sm:px-6 lg:px-8">
@@ -257,7 +262,7 @@ export default function ChangelogsPage() {
           <div className="space-y-6">
             {releases.map((release, index) => (
               <div key={release.id}>
-                <Card className="hover:shadow-md transition-shadow">
+                <Card className="hover:shadow-md transition-shadow bg-[#121212]">
                   <CardHeader>
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex-1">
@@ -309,7 +314,7 @@ export default function ChangelogsPage() {
                               href={asset.browser_download_url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="flex items-center justify-between rounded-lg border border-border bg-[#121212] p-3 hover:bg-muted transition-colors group"
+                              className="flex items-center justify-between rounded-lg border border-border bg-card p-3 hover:bg-muted transition-colors group"
                             >
                               <div className="flex items-center gap-2 flex-1 min-w-0">
                                 <span className="text-lg">📦</span>
