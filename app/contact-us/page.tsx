@@ -51,7 +51,7 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="rounded-lg border border-border bg-card p-8 shadow-lg">
+        <div className="rounded-lg border border-border bg-[#121212] p-8 shadow-lg">
           {success ? (
             <div className="flex flex-col items-center justify-center py-12">
               <div className="mb-4 h-16 w-16 rounded-full bg-green-500/10 flex items-center justify-center">
@@ -125,7 +125,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full rounded-lg bg-orange-500 px-6 py-3 font-semibold text-white hover:bg-orange-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
+                className="w-full rounded-lg bg-[rgba(255, 107, 0, 0.1)] px-6 py-3 font-semibold text-[#ff6b00] border border-[rgba(255, 107, 0, 0.2)] disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
               >
                 {loading ? (
                   <>
@@ -141,17 +141,17 @@ export default function ContactPage() {
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <div className="rounded-lg border border-border bg-card p-6 text-center">
+          <div className="rounded-lg border border-border bg-[#121212] p-6 text-center">
             <div className="mb-3 text-2xl">💬</div>
             <h3 className="mb-2 font-semibold text-foreground">Quick Response</h3>
             <p className="text-sm text-muted-foreground">We typically respond within 24 hours</p>
           </div>
-          <div className="rounded-lg border border-border bg-card p-6 text-center">
+          <div className="rounded-lg border border-border bg-[#121212] p-6 text-center">
             <div className="mb-3 text-2xl">🔒</div>
             <h3 className="mb-2 font-semibold text-foreground">Secure</h3>
             <p className="text-sm text-muted-foreground">Your information is safe and encrypted</p>
           </div>
-          <div className="rounded-lg border border-border bg-card p-6 text-center">
+          <div className="rounded-lg border border-border bg-[#121212] p-6 text-center">
             <div className="mb-3 text-2xl">⚡</div>
             <h3 className="mb-2 font-semibold text-foreground">Always Available</h3>
             <p className="text-sm text-muted-foreground">Contact us anytime, any day</p>
@@ -162,6 +162,7 @@ export default function ContactPage() {
     </div>
   )
 }
+
 
 
 
