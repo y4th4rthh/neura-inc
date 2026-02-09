@@ -40,7 +40,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#1a1a1a] flex flex-col"
+    <div className="min-h-screen bg-[#1a1a1a] flex flex-col scrollbar-hide"
        style={{
     scrollbarWidth: "thin",
     scrollbarColor: "#444 #1a1a1a"
@@ -167,6 +167,7 @@ export default function ContactPage() {
     </div>
   )
 }
+
 
 
 
