@@ -40,7 +40,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-[#1a1a1a] flex flex-col">
 
       <main className="flex-1 mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 w-full">
         <div className="mb-8">
@@ -162,5 +162,6 @@ export default function ContactPage() {
     </div>
   )
 }
+
 
 
