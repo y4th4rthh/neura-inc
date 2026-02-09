@@ -220,7 +220,7 @@ export default function ChangelogsPage() {
 
 
   return (
-    <div className="min-h-screen bg-[#1a1a1a]"
+    <div className="min-h-screen bg-[#1a1a1a] scrollbar-hide"
        style={{
     scrollbarWidth: "thin",
     scrollbarColor: "#444 #1a1a1a"
