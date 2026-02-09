@@ -227,7 +227,7 @@ export default function ChangelogsPage() {
   }}
       >
       {/* Header */}
-      <header className="mt-4">
+      <header>
         <div className="mx-auto max-w-4xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-2">
             <h1 className="text-2xl font-bold text-foreground">Changelogs</h1>
