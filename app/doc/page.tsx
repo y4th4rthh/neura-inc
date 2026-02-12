@@ -340,9 +340,9 @@ export default function DocumentPage() {
             </CardContent>
           </Card>
         ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1">
             {/* Document List */}
-            <div className="lg:col-span-1">
+            <div className="lg:col-span-1 mb-6">
               <Card className="bg-[#121212] sticky top-6">
                 <CardHeader>
                   <CardTitle className="text-lg">Documents ({documents.length})</CardTitle>
@@ -462,4 +462,5 @@ export default function DocumentPage() {
   )
 
 }
+
 
