@@ -318,7 +318,7 @@ export default function DocumentPage() {
             <Button
               onClick={() => fileInputRef.current?.click()}
               disabled={isLoading}
-              className="bg-primary hover:bg-primary/90"
+              className="bg-orange-500/10 border border-orange-500/30 rounded-lg text-orange-500 text-sm font-medium hover:bg-orange-500/20 hover:border-orange-500/50 transition-all duration-200"
             >
               {isLoading ? (
                 <>
@@ -436,7 +436,7 @@ export default function DocumentPage() {
                             </>
                           )}
                           <Button
-                            variant="destructive"
+                            className = "bg-red-500/10 border border-red-500/30 rounded-lg text-red-500 text-sm font-medium hover:bg-red-500/20 hover:border-red-500/50 transition-all duration-200"
                             size="sm"
                             onClick={() => removeDocument(selectedDoc.id)}
                           >
@@ -460,4 +460,5 @@ export default function DocumentPage() {
       </main>
     </div>
   )
+
 }
