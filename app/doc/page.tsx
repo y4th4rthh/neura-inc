@@ -412,13 +412,13 @@ export default function DocumentPage() {
                                   <Button
                                     size="sm"
                                     onClick={handleSaveEdit}
-                                    className="bg-green-600 hover:bg-green-700"
+                                    className="bg-green-500/10 border border-green-500/30 rounded-lg text-green-500 text-sm font-medium hover:bg-green-500/20 hover:border-green-500/50 transition-all duration-200"
                                   >
                                     Save
                                   </Button>
                                   <Button
                                     size="sm"
-                                    variant="outline"
+                                    className = "bg-red-500/10 border border-red-500/30 rounded-lg text-red-500 text-sm font-medium hover:bg-red-500/20 hover:border-red-500/50 transition-all duration-200"
                                     onClick={handleEditToggle}
                                   >
                                     Cancel
@@ -427,7 +427,7 @@ export default function DocumentPage() {
                               ) : (
                                 <Button
                                   size="sm"
-                                  variant="outline"
+                                  className = "bg-orange-500/10 border border-orange-500/30 rounded-lg text-orange-500 text-sm font-medium hover:bg-orange-500/20 hover:border-orange-500/50 transition-all duration-200"
                                   onClick={handleEditToggle}
                                 >
                                   Edit
@@ -462,3 +462,4 @@ export default function DocumentPage() {
   )
 
 }
+
