@@ -130,7 +130,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full rounded-lg bg-[rgba(255, 107, 0, 0.1)] px-6 py-3 font-semibold text-[#ff6b00] border border-[rgba(255, 107, 0, 0.2)] disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
+                className="w-full px-6 py-3  disabled:opacity-50 disabled:cursor-not-allowed bg-orange-500/10 border border-orange-500/30 rounded-lg text-orange-500 text-sm font-medium hover:bg-orange-500/20 hover:border-orange-500/50 transition-all duration-200 items-center justify-center gap-2"
               >
                 {loading ? (
                   <>
@@ -167,6 +167,7 @@ export default function ContactPage() {
     </div>
   )
 }
+
 
 
 
