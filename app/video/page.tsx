@@ -118,7 +118,7 @@ export default function VideoPage() {
                         />
                         <Button
                             onClick={() => fileInputRef.current?.click()}
-                            className="bg-primary hover:bg-primary/90"
+                            className="bg-orange-500/10 border border-orange-500/30 rounded-lg text-orange-500 text-sm font-medium hover:bg-orange-500/20 hover:border-orange-500/50 transition-all duration-200"
                         >
                             Choose Videos
                         </Button>
@@ -194,8 +194,8 @@ export default function VideoPage() {
                                                     </CardDescription>
                                                 </div>
                                                 <Button
-                                                    variant="destructive"
                                                     size="sm"
+                                                    className="bg-red-500/10 border border-red-500/30 rounded-lg text-red-500 text-sm font-medium hover:bg-red-500/20 hover:border-red-500/50 transition-all duration-200"
                                                     onClick={() => removeVideo(selectedVideo.id)}
                                                 >
                                                     Remove
@@ -217,4 +217,5 @@ export default function VideoPage() {
             </main>
         </div>
     )
+
 }
