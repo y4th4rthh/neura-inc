@@ -109,8 +109,24 @@ export default function StatusPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-background flex flex-col">
+      <div className="min-h-screen bg-[#0a0a0a] flex">
         <Header />
+
+         <div className="flex-1 flex flex-col h-[calc(100vh-16px)] relative m-2  bg-[#121212] rounded-xl border border-white/10 overflow-hidden transition-[margin,border-radius] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+        <style>
+          {`
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    `}
+        </style>
+        <div className="overflow-scroll hide-scrollbar"
+          style={{
+            scrollbarWidth: 'none',     // Firefox
+            msOverflowStyle: 'none'     // IE/Edge legacy
+          }}
+        >
+          
         <main className="flex-1 flex items-center justify-center">
           <div className="text-center">
             <div className="h-12 w-12 animate-spin rounded-full border-4 border-primary border-t-transparent mx-auto mb-4" />
@@ -118,6 +134,8 @@ export default function StatusPage() {
           </div>
         </main>
         <Footer />
+        </div>
+         </div>
       </div>
     )
   }
@@ -241,3 +259,4 @@ export default function StatusPage() {
   )
 
 }
+
