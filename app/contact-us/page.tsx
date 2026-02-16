@@ -42,12 +42,26 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-[#0a0a0a] flex ">
       <Header />
 
+ <div className="flex-1 flex flex-col h-[calc(100vh-16px)] relative m-2  bg-[#121212] rounded-xl border border-white/10 overflow-hidden transition-[margin,border-radius] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+         <style>
+    {`
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    `}
+  </style>
+        <div className="overflow-scroll hide-scrollbar"
+         style={{
+    scrollbarWidth: 'none',     // Firefox
+    msOverflowStyle: 'none'     // IE/Edge legacy
+  }}
+        >
       <main className="flex-1 mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 w-full">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-foreground mb-2">Get in Touch</h1>
+          <h1 className="md:text-4xl text-3xl font-bold text-foreground mb-2">Get in Touch</h1>
           <p className="text-lg text-muted-foreground">
             Have questions or feedback? We'd love to hear from you. Send us a message and we'll respond as soon as
             possible.
@@ -163,6 +177,8 @@ export default function ContactPage() {
       </main>
 
       <Footer />
+    </div>
+    </div>
     </div>
   )
 }
