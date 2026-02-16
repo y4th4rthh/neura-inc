@@ -134,19 +134,10 @@ export default function StatusPage() {
               <h1 className="text-4xl font-bold text-foreground mb-2">System Status</h1>
               <p className={`text-lg font-semibold ${statusColor}`}>{overallStatus}</p>
             </div>
-            <button
-              onClick={() => {
-                setAutoRefresh(!autoRefresh)
-                if (!autoRefresh) fetchStatus()
-              }}
-              className="px-4 py-2 rounded-lg bg-orange-500 text-white hover:bg-orange-600 transition-colors text-sm font-medium"
-            >
-              {autoRefresh ? 'Auto-refresh ON' : 'Auto-refresh OFF'}
-            </button>
           </div>
           {lastUpdated && (
             <p className="text-sm text-muted-foreground">
-              Last updated: {lastUpdated.toLocaleTimeString()} • Checking every 60 seconds
+              Last updated: {lastUpdated.toLocaleTimeString()}
             </p>
           )}
         </div>
@@ -177,10 +168,6 @@ export default function StatusPage() {
                   <span className={`font-semibold ${getUptimeColor(backend.uptime)}`}>
                     {formatUptime(backend.uptime)}
                   </span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-muted-foreground">Checks</span>
-                  <span className="font-semibold text-foreground">{backend.checkCount}</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-muted-foreground">Last Check</span>
@@ -235,4 +222,5 @@ export default function StatusPage() {
       <Footer />
     </div>
   )
+
 }
