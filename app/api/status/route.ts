@@ -29,13 +29,12 @@ const BACKENDS = [
   }
 ]
 
-// Store status history in memory (use a database in production)
+// Store status history in memory
 let statusHistory: Record<string, Array<{ timestamp: number; status: 'up' | 'down' }>> = {}
+let lastCheckTime = 0
 
 BACKENDS.forEach(backend => {
-  if (!statusHistory[backend.url]) {
-    statusHistory[backend.url] = []
-  }
+  statusHistory[backend.url] = []
 })
 
 async function checkBackendStatus(url: string): Promise<'up' | 'down'> {
@@ -55,56 +54,72 @@ async function checkBackendStatus(url: string): Promise<'up' | 'down'> {
   }
 }
 
+async function performHealthCheck() {
+  const timestamp = Date.now()
+  
+  const checkPromises = BACKENDS.map(async (backend) => {
+    const status = await checkBackendStatus(backend.url)
+    
+    if (!statusHistory[backend.url]) {
+      statusHistory[backend.url] = []
+    }
+    
+    statusHistory[backend.url].push({ timestamp, status })
+    
+    // Keep only last 24 hours
+    const oneDayAgo = Date.now() - 24 * 60 * 60 * 1000
+    statusHistory[backend.url] = statusHistory[backend.url].filter(
+      (entry) => entry.timestamp > oneDayAgo
+    )
+  })
+  
+  await Promise.all(checkPromises)
+  lastCheckTime = timestamp
+}
+
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams
   const action = searchParams.get('action')
 
-  if (action === 'check') {
-    const results = await Promise.all(
-      BACKENDS.map(async (backend) => {
-        const status = await checkBackendStatus(backend.url)
-        const timestamp = Date.now()
-
-        if (!statusHistory[backend.url]) {
-          statusHistory[backend.url] = []
-        }
-
-        statusHistory[backend.url].push({ timestamp, status })
-
-        const oneDayAgo = Date.now() - 24 * 60 * 60 * 1000
-        statusHistory[backend.url] = statusHistory[backend.url].filter(
-          (entry) => entry.timestamp > oneDayAgo
-        )
-
-        return {
-          name: backend.name,
-          services: backend.services,
-          url: backend.url,
-          status,
-          timestamp
-        }
-      })
-    )
-
-    return NextResponse.json({ results, timestamp: Date.now() })
+  // Check if we need to perform a fresh health check (every 60 seconds)
+  const now = Date.now()
+  if (now - lastCheckTime > 60000 || lastCheckTime === 0) {
+    await performHealthCheck()
   }
 
-  // Default: return current status with 24h uptime calculation
+  if (action === 'check') {
+    // Force immediate check
+    await performHealthCheck()
+  }
+
+  // Return current status with uptime calculation
   const results = BACKENDS.map((backend) => {
     const history = statusHistory[backend.url] || []
-    const currentStatus = history.length > 0 ? history[history.length - 1].status : 'unknown'
-    const uptime = history.length > 0
-      ? ((history.filter((h) => h.status === 'up').length / history.length) * 100)
-      : 'N/A'
+    
+    if (history.length === 0) {
+      return {
+        name: backend.name,
+        services: backend.services,
+        url: backend.url,
+        status: 'unknown',
+        uptime: 'N/A',
+        checkCount: 0,
+        lastChecked: null
+      }
+    }
+    
+    const currentStatus = history[history.length - 1].status
+    const upCount = history.filter((h) => h.status === 'up').length
+    const uptime = (upCount / history.length) * 100
 
     return {
       name: backend.name,
       services: backend.services,
       url: backend.url,
       status: currentStatus,
-      uptime: typeof uptime === 'number' ? parseFloat(uptime.toFixed(2)) : uptime,
+      uptime: parseFloat(uptime.toFixed(2)),
       checkCount: history.length,
-      lastChecked: history.length > 0 ? history[history.length - 1].timestamp : null
+      lastChecked: history[history.length - 1].timestamp
     }
   })
 
