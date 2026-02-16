@@ -84,6 +84,10 @@ export async function GET(request: NextRequest) {
   // Check if we need to perform a fresh health check (every 60 seconds)
   const now = Date.now()
 
+  if (now - lastCheckTime > 600000 || lastCheckTime === 0){
+     await performHealthCheck()
+  }
+
   if (action === 'check') {
     // Force immediate check
     await performHealthCheck()
@@ -122,4 +126,5 @@ export async function GET(request: NextRequest) {
 
   return NextResponse.json({ results, timestamp: Date.now() })
 }
+
 
