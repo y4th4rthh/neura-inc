@@ -4,12 +4,17 @@ import { NextResponse } from 'next/server'
 const BACKENDS = [
   {
     url: 'https://voice-assistant-ai-adnm.onrender.com/ping',
-    name: 'Neura Essence & Swift',
-    services: ['neura.essence1.o', 'neura.swift1.o']
+    name: 'neura.essence1.o',
+    services: ['neura.essence1.o']
+  },
+  {
+    url: 'https://voice-assistant-ai-adnm.onrender.com/ping',
+    name: 'neura.swift1.o',
+    services: ['neura.swift1.o']
   },
   {
     url: 'https://doc-summarization.onrender.com/ping',
-    name: 'Neura Infinity',
+    name: 'neura.infinity1.o',
     services: ['neura.infinity1.o']
   },
   {
@@ -19,12 +24,12 @@ const BACKENDS = [
   },
   {
     url: 'https://google-custom-searchapi.onrender.com/ping',
-    name: 'Hybrid AI',
+    name: 'Hybrid AI Mode',
     services: ['Hybrid ai']
   },
   {
     url: 'https://web-data-scraping.onrender.com/ping',
-    name: 'Neura Vista',
+    name: 'neura.vista1.o',
     services: ['neura.vista1.o']
   }
 ]
@@ -126,5 +131,6 @@ export async function GET(request: NextRequest) {
 
   return NextResponse.json({ results, timestamp: Date.now() })
 }
+
 
 
