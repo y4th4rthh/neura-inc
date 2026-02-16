@@ -222,20 +222,34 @@ export default function ChangelogsPage() {
 
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen flex bg-[#0a0a0a]">
       {/* Header */}
       <Header/>
+      <div className="flex-1 flex flex-col h-[calc(100vh-16px)] relative m-2  bg-[#121212] rounded-xl border border-white/10 overflow-hidden transition-[margin,border-radius] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+         <style>
+    {`
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    `}
+  </style>
+        <div className="overflow-scroll hide-scrollbar"
+         style={{
+    scrollbarWidth: 'none',     // Firefox
+    msOverflowStyle: 'none'     // IE/Edge legacy
+  }}
+        >
       <header className="mt-4">
-        <div className="mx-auto max-w-4xl px-4 py-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-2">
-            <h1 className="text-2xl font-bold text-foreground">Changelogs</h1>
+            <h1 className="md:text-4xl text-3xl font-bold text-foreground">Changelogs</h1>
           </div>
           <p className="text-muted-foreground">Track all releases, updates, and improvements to Neura.ai</p>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
+      <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
         {isLoading ? (
           <div className="flex flex-col items-center justify-center py-16">
             <Spinner className="h-8 w-8 mb-4" />
@@ -343,6 +357,8 @@ export default function ChangelogsPage() {
         )}
       </main>
       <Footer/>
+    </div>
+    </div>
     </div>
   )
 }
