@@ -22,7 +22,7 @@ export default function Sidebar() {
     { href: "/", label: "Platform", icon: Zap, title: "Neura.ai"},
     { href: "/explore", label: "Explore", icon: Atom ,title: "Neura.explore"},
     { href: "/changelogs", label: "Changelogs", icon: ScrollText,title: "Changelogs" },
-    { href: "/status", label: "Neura Status", icon: Activity,title: "Neura Status" },
+    // { href: "/status", label: "Neura Status", icon: Activity,title: "Neura Status" },
     { href: "/demo", label: "Try it?", icon: HelpCircle,title: "Demo?" },
     { href: "/contact-us", label: "Contact Us", icon: Mail,title: "Neura Support" },
   ];
@@ -31,7 +31,7 @@ export default function Sidebar() {
     { href: "/", label: "Platform", icon: Zap, title: "Neura.ai"},
     { href: "/explore", label: "Explore", icon: Atom ,title: "Neura.explore"},
     { href: "/changelogs", label: "Changelogs", icon: ScrollText,title: "Changelogs" },
-    { href: "/status", label: "Neura Status", icon: Activity,title: "Neura Status" },
+    // { href: "/status", label: "Neura Status", icon: Activity,title: "Neura Status" },
     { href: "/demo", label: "Try it?", icon: HelpCircle,title: "Demo?" },
     { href: "/contact-us", label: "Contact Us", icon: Mail,title: "Neura Support" },
   ];
