@@ -67,7 +67,22 @@ export default function ChangelogsPage() {
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i]
-      const trimmed = line.trim()
+      let trimmed = line.trim()
+
+// Render <blockquote> content with styled callout
+if (trimmed.startsWith("<blockquote>")) {
+  const content = trimmed.replace(/<\/?[^>]+(>|$)/g, "").trim()
+  if (content) {
+    elements.push(
+      <div key={i} className="border-l-4 border-yellow-500 pl-3 py-1 bg-yellow-500/10 rounded-r text-sm text-muted-foreground mb-2">
+        {renderInlineMarkdown(content)}
+      </div>
+    )
+  }
+  continue
+}
+
+trimmed = trimmed.replace(/<\/?[^>]+(>|$)/g, "").trim()
 
       if (!trimmed) {
         elements.push(<div key={`empty-${i}`} className="mb-2" />)
