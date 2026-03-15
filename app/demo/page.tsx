@@ -7,6 +7,44 @@ import { Button } from "@/components/ui/button"
 
 export default function DemoPage() {
   const [isLoading, setIsLoading] = useState(true)
+  const [link, setLink] = useState("")
+  const [label, setLabel] = useState("")
+
+   useEffect(() => {
+    const ua = navigator.userAgent.toLowerCase();
+
+    const base =
+      "https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/";
+
+    if (ua.includes("win")) {
+      setLink(base + "neura.ai.exe");
+      setLabel("Download for Windows");
+    } 
+    
+    else if (ua.includes("linux")) {
+
+      if (ua.includes("fedora") || ua.includes("rhel") || ua.includes("centos")) {
+        setLink(base + "neura.ai.rpm");
+        setLabel("Download (.rpm)");
+      } 
+      
+      else if (ua.includes("ubuntu") || ua.includes("debian")) {
+        setLink(base + "neura.ai.deb");
+        setLabel("Download (.deb)");
+      } 
+      
+      else {
+        setLink(base + "neura.ai.AppImage");
+        setLabel("Download (AppImage)");
+      }
+
+    } 
+    
+    else {
+      setLink(base + "neura.ai.apk");
+      setLabel("Download");
+    }
+  }, [])
 
   useEffect(() => {
     // Simulate loading completion after iframe starts
@@ -45,21 +83,21 @@ export default function DemoPage() {
 
             <div className="flex gap-2 sm:gap-4 justify-center pt-6 pb-6">
               <a
-                href="https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.ai.exe"
+                href={link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  Download (.exe)
+                  {label}
                 </Button>
               </a>
               <a
-                href="https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.ai.AppImage"
+                href="https://neura-ai.netlify.app"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Button size="lg" variant="outline" className="border-border hover:bg-muted bg-transparent">
-                  Download (App Image)
+                  Visit Neura.ai
                 </Button>
               </a>
             </div>
