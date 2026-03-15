@@ -29,7 +29,7 @@ export default function ExploreHero() {
       
       else {
         setLink(base + "neura.explore.AppImage");
-        setLabel("Download (AppImage)");
+        setLabel("Download (.AppImage)");
       }
 
     } 
