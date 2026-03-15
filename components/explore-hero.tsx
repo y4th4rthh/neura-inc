@@ -2,8 +2,44 @@
 
 import { Button } from "@/components/ui/button"
 import {Atom} from "lucide-react"
+import { useEffect, useState } from "react"
 
 export default function ExploreHero() {
+
+   const [link, setLink] = useState("")
+  const [label, setLabel] = useState("")
+
+  useEffect(() => {
+    const ua = navigator.userAgent.toLowerCase();
+
+    const base =
+      "https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/";
+    
+    if (ua.includes("linux")) {
+
+      if (ua.includes("fedora") || ua.includes("rhel") || ua.includes("centos")) {
+        setLink(base + "neura.explore.rpm");
+        setLabel("Download (.rpm)");
+      } 
+      
+      else if (ua.includes("ubuntu") || ua.includes("debian")) {
+        setLink(base + "neura.explore.deb");
+        setLabel("Download (.deb)");
+      } 
+      
+      else {
+        setLink(base + "neura.explore.AppImage");
+        setLabel("Download (AppImage)");
+      }
+
+    } 
+    
+    else {
+      setLink(base + "neura.explore.AppImage");
+      setLabel("Download");
+    }
+  }, [])
+  
   return (
     <section className="relative py-18 px-4 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none" />
@@ -32,12 +68,12 @@ export default function ExploreHero() {
               </Button>
             </a>
             <a
-              href="https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.explore.AppImage"
+              href={link}
               target="_blank"
               rel="noopener noreferrer"
             >
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                Download for Linux
+                {label}
               </Button>
             </a>
           </div>
