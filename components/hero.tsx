@@ -40,7 +40,7 @@ export default function Hero() {
       
       else {
         setLink(base + "neura.ai.AppImage");
-        setLabel("Download (AppImage)");
+        setLabel("Download (.AppImage)");
       }
 
     } 
