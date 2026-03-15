@@ -19,24 +19,24 @@ export default function ExploreHero() {
 
       if (ua.includes("fedora") || ua.includes("rhel") || ua.includes("centos")) {
         setLink(base + "neura.explore.rpm");
-        setLabel("Download (.rpm)");
+        setLabel("Download for Linux");
       } 
       
       else if (ua.includes("ubuntu") || ua.includes("debian")) {
         setLink(base + "neura.explore.deb");
-        setLabel("Download (.deb)");
+        setLabel("Download for Linux");
       } 
       
       else {
         setLink(base + "neura.explore.AppImage");
-        setLabel("Download (.AppImage)");
+        setLabel("Download for Linux");
       }
 
     } 
     
     else {
-      setLink(base + "neura.explore.AppImage");
-      setLabel("Download");
+      setLink(base + "neura.explore.deb");
+      setLabel("Download for Linux");
     }
   }, [])
   
