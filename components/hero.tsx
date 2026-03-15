@@ -21,11 +21,6 @@ export default function Hero() {
       setLabel("Download for Windows");
     } 
     
-    else if (ua.includes("mac")) {
-      setLink(base + "neura.ai.dmg");
-      setLabel("Download for macOS");
-    } 
-    
     else if (ua.includes("linux")) {
 
       if (ua.includes("fedora") || ua.includes("rhel") || ua.includes("centos")) {
