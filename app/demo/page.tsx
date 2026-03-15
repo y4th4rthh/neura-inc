@@ -54,12 +54,12 @@ export default function DemoPage() {
                 </Button>
               </a>
               <a
-                href="https://neura-ai.netlify.app/"
+                href="https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.ai.AppImage"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Button size="lg" variant="outline" className="border-border hover:bg-muted bg-transparent">
-                  Visit Neura.ai
+                  Download (App Image)
                 </Button>
               </a>
             </div>
