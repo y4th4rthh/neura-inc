@@ -72,7 +72,7 @@ export default function ExploreHero() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Button size="lg" variant="outline" className="border-border hover:bg-muted bg-transparent">
                 {label}
               </Button>
             </a>
