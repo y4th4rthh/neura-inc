@@ -19,7 +19,18 @@ export default function Downloads() {
           label: "Android (.apk)",
           url: "https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.ai.apk",
         },
-        { label: "Web App", url: "https://neura-ai.netlify.app" },
+         {
+          label: "Linux (.deb)",
+          url: "https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.ai.deb",
+        },
+         {
+          label: "Linux (.rpm)",
+          url: "https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.ai.rpm",
+        },
+         {
+          label: "Linux (App Image)",
+          url: "https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.ai.AppImage",
+        },
       ],
     },
     {
@@ -30,6 +41,18 @@ export default function Downloads() {
         {
           label: "Windows (.exe)",
           url: "https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.explore.exe",
+        },
+        {
+          label: "Linux (.deb)",
+          url: "https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.explore.deb",
+        },
+         {
+          label: "Linux (.rpm)",
+          url: "https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.explore.rpm",
+        },
+         {
+          label: "Linux (App Image)",
+          url: "https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.explore.AppImage",
         },
       ],
     },
