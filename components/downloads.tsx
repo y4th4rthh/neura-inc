@@ -28,7 +28,7 @@ export default function Downloads() {
           url: "https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.ai.rpm",
         },
          {
-          label: "Linux (App Image)",
+          label: "Linux (.AppImage)",
           url: "https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.ai.AppImage",
         },
       ],
@@ -51,7 +51,7 @@ export default function Downloads() {
           url: "https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.explore.rpm",
         },
          {
-          label: "Linux (App Image)",
+          label: "Linux (.AppImage)",
           url: "https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.explore.AppImage",
         },
       ],
