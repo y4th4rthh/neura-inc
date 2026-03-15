@@ -35,14 +35,14 @@ export default function DemoPage() {
       
       else {
         setLink(base + "neura.ai.AppImage");
-        setLabel("Download (AppImage)");
+        setLabel("Download (.AppImage)");
       }
 
     } 
     
     else {
       setLink(base + "neura.ai.apk");
-      setLabel("Download");
+      setLabel("Download (.apk)");
     }
   }, [])
 
