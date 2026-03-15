@@ -31,9 +31,15 @@ export default function ExploreHero() {
                 Download for Windows
               </Button>
             </a>
-            <Button size="lg" variant="outline" className="border-border hover:bg-muted bg-transparent">
-              Learn More
-            </Button>
+            <a
+              href="https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.explore.AppImage"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                Download for Linux
+              </Button>
+            </a>
           </div>
 
           <div className="pt-12 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
