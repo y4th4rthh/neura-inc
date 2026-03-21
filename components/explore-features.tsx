@@ -5,34 +5,34 @@ import { Card } from "@/components/ui/card"
 export default function ExploreFeatures() {
   const features = [
     {
+      icon: "🌐",
+      title: "Hybrid Search Engine",
+      description: "A dual-layer architecture blending traditional web indexing with real-time AI synthesis for instant, accurate answers.",
+    },
+    {
+      icon: "🛡️",
+      title: "Native Ad-Blocking",
+      description: "Engineered-in privacy that strips ads from YouTube and News sites at the engine level for a distraction-free web.",
+    },
+    {
+      icon: "🧠",
+      title: "Neura Vista 1.0",
+      description: "Advanced on-the-fly content analysis. Summarize complex articles or long-form videos without leaving your tab.",
+    },
+    {
       icon: "⚡",
-      title: "Integrated Sidebar",
-      description: "Access all Neura.ai tools directly from your browser sidebar for seamless workflow",
+      title: "Integrated AI Panel",
+      description: "A persistent sidebar housing powerful LLMs, enabling seamless multi-tasking and deep-page interaction.",
     },
     {
-      icon: "🔍",
-      title: "Smart Search",
-      description: "Hybrid mode with live search capabilities built into your browser",
-    },
-    {
-      icon: "📄",
-      title: "Content Analysis",
-      description: "Summarize and analyze web content on the fly with neura.vista1.o",
-    },
-    {
-      icon: "💬",
-      title: "Quick Chat",
-      description: "Chat with AI models without leaving your current page",
-    },
-    {
-      icon: "🎯",
-      title: "Stack Overflow Mode",
-      description: "Get instant answers to coding questions while browsing",
+      icon: "🕵️",
+      title: "Persistent Ghost Mode",
+      description: "A Ghost Mode feature that provides hybrid incognito approach - Keeps you logged in at various sites but leave no trace.",
     },
     {
       icon: "🚀",
-      title: "Lightning Performance",
-      description: "Optimized for speed with minimal resource usage",
+      title: "Native Internal Pages",
+      description: "A standalone native pages built for high performance and minimal overhead.",
     },
   ]
 
