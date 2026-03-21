@@ -25,14 +25,14 @@ export default function ExploreFeatures() {
       description: "A persistent sidebar housing powerful LLMs, enabling seamless multi-tasking and deep-page interaction.",
     },
     {
-      icon: "🕵️",
-      title: "Persistent Ghost Mode",
-      description: "A Ghost Mode feature that provides hybrid incognito approach - Keeps you logged in at various sites but leave no trace.",
-    },
+  icon: "🕵️",
+  title: "Persistent Ghost Mode",
+  description: "A hybrid incognito architecture that keeps you logged into your favorite sites while ensuring zero local footprint.",
+   },
     {
       icon: "🚀",
-      title: "Native Internal Pages",
-      description: "A standalone native pages built for high performance and minimal overhead.",
+      title: "Lightning Performance",
+      description: "A standalone desktop experience built for high performance with intelligent resource management and minimal overhead.",
     },
   ]
 
