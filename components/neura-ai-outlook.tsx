@@ -162,9 +162,6 @@ export default function Outlook() {
               />
               {/* Browser chrome bar */}
               <div className="absolute top-0 left-0 right-0 h-8 bg-[#161616] border-b border-white/5 flex items-center px-4 gap-2 z-20">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
-                <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
-                <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
                 <div className="mx-auto flex-1 max-w-xs mx-4">
                   <div className="bg-white/5 border border-white/8 rounded-md h-5 flex items-center px-3">
                     <span className="text-[10px] text-muted-foreground truncate">neura.ai / {current.label.toLowerCase().replace(/\s+/g, "-")}</span>
@@ -172,10 +169,11 @@ export default function Outlook() {
                 </div>
               </div>
               {/* Screenshot */}
+              <div className="absolute inset-0 top-8">
               <img
                 src={current.image}
                 alt={current.label}
-                className="w-full h-full object-cover object-top mt-0 pt-8"
+                className="w-full h-full object-cover object-top"
                 style={{ marginTop: "2rem" }}
                 onError={(e) => {
                   // fallback placeholder if image doesn't load
@@ -183,6 +181,7 @@ export default function Outlook() {
                   target.style.display = "none"
                 }}
               />
+                 </div>
             </div>
 
             {/* Info bar */}
