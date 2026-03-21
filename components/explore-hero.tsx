@@ -1,12 +1,13 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import {Atom} from "lucide-react"
+import { Atom } from "lucide-react"
+import Link from "next/link"
 import { useEffect, useState } from "react"
 
 export default function ExploreHero() {
 
-   const [link, setLink] = useState("")
+  const [link, setLink] = useState("")
   const [label, setLabel] = useState("")
 
   useEffect(() => {
@@ -14,32 +15,32 @@ export default function ExploreHero() {
 
     const base =
       "https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/";
-    
+
     if (ua.includes("linux")) {
 
       if (ua.includes("fedora") || ua.includes("rhel") || ua.includes("centos")) {
         setLink(base + "neura.explore.rpm");
         setLabel("Download for Linux");
-      } 
-      
+      }
+
       else if (ua.includes("ubuntu") || ua.includes("debian")) {
         setLink(base + "neura.explore.deb");
         setLabel("Download for Linux");
-      } 
-      
+      }
+
       else {
         setLink(base + "neura.explore.AppImage");
         setLabel("Download for Linux");
       }
 
-    } 
-    
+    }
+
     else {
       setLink(base + "neura.explore.deb");
       setLabel("Download for Linux");
     }
   }, [])
-  
+
   return (
     <section className="relative py-18 px-4 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none" />
@@ -47,34 +48,22 @@ export default function ExploreHero() {
       <div className="container mx-auto max-w-4xl relative z-10">
         <div className="text-center space-y-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#ff6b00] to-[#ff8c42] rounded-[18px]">
-            <span className="text-6xl"><Atom size={36}/></span>
+            <span className="text-6xl"><Atom size={36} /></span>
           </div>
 
           <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight">Neura Explore</h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base md:text-2xl text-muted-foreground max-w-3xl mx-auto">
             AI Native browser with built-in Adblocker and AI assistant featuring a hybrid search architecture that blends traditional web results with real-time AI insights.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-            <a
-              href="https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.explore.exe"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                Download for Windows
-              </Button>
-            </a>
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button size="lg" variant="outline" className="border-border hover:bg-muted bg-transparent">
-                {label}
-              </Button>
-            </a>
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Link href={"https://github.com/y4th4rthh/neura.ai-releases/releases/latest/download/neura.explore.exe"}>Download for Windows</Link>
+            </Button>
+            <Button size="lg" variant="outline" className="border-border hover:bg-muted bg-transparent">
+              <Link href={link}>{label}</Link>
+            </Button>
           </div>
 
           <div className="pt-12 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">

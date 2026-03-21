@@ -44,8 +44,8 @@ export default function Features() {
                           <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
                           Key Insights
                         </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Powerful Features</h2>
-          <p className="text-lg text-muted-foreground">Everything you need for advanced AI interactions</p>
+          <h2 className="text-2xl md:text-5xl font-bold text-foreground mb-4">Powerful Features</h2>
+          <p className="text-base md:text-lg text-muted-foreground">Everything you need for advanced AI interactions</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

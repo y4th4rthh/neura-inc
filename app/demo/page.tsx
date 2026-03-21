@@ -79,16 +79,16 @@ export default function DemoPage() {
                 <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
                 Live Demo
               </div>
-              <h2 className="md:text-4xl text-3xl font-bold text-foreground">
+              <h2 className="md:text-4xl text-2xl font-bold text-foreground">
                 Experience AI at Lightning Speed
               </h2>
-              <p className="mt-4 text-lg text-muted-foreground">
+              <p className="mt-4 text-base md:text-lg text-muted-foreground">
                 Chat with Neura.ai — ultra-fast conversations powered by cutting-edge AI
               </p>
             </div>
 
             {/* CTA buttons */}
-            <div className="flex gap-3 justify-center pb-10 fade-up" style={{ animationDelay: "0.08s" }}>
+            <div className="gap-3 flex flex-col sm:flex-row justify-center pb-10 fade-up" style={{ animationDelay: "0.08s" }}>
               <a href={link} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                   {label}

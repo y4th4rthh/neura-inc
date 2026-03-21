@@ -164,13 +164,13 @@ export default function ChangelogsPage() {
         <div className="overflow-scroll hide-scrollbar" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
 
           {/* Page header */}
-          <div className="mx-auto max-w-4xl px-4 pt-14 pb-10 sm:px-6 lg:px-8 fade-up">
+          <div className="mx-auto text-center max-w-4xl px-4 pt-14 pb-10 sm:px-6 lg:px-8 fade-up">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs text-muted-foreground mb-5 tracking-widest uppercase">
               <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
               Changelog Cycle
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-3">Changelogs</h1>
-            <p className="text-muted-foreground text-lg">
+            <h1 className="text-2xl md:text-5xl font-bold text-foreground mb-3">Changelogs</h1>
+            <p className="text-muted-foreground text-base md:text-lg">
               Track all releases, updates, and improvements to Neura.ai
             </p>
           </div>

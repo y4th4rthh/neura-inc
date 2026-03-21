@@ -110,8 +110,8 @@ export default function Outlook() {
             <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
             Product Outlook
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">See It In Action</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-2xl md:text-5xl font-bold text-foreground mb-4">See It In Action</h2>
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             A live preview of every tool inside Neura.ai — crafted for speed, depth, and clarity.
           </p>
         </div>

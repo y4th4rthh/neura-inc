@@ -66,8 +66,8 @@ export default function Downloads() {
                                     <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
                                     Download & Access
                                   </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Download Neura.ai & Neura.explore</h2>
-          <p className="text-lg text-muted-foreground">Get Neura.ai & Neura.explore on your preferred platform</p>
+          <h2 className="text-2xl md:text-5xl font-bold text-foreground mb-4">Download Neura.ai & Neura.explore</h2>
+          <p className="text-base md:text-lg text-muted-foreground">Get Neura.ai & Neura.explore on your preferred platform</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -96,10 +96,10 @@ export default function OutlookExplore() {
             <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
             Browser Outlook
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Neura.explore
+          <h2 className="text-2xl md:text-5xl font-bold text-foreground mb-4">
+            See It In Action
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
             An AI-integrated browser built for the way you actually think — search, summarize, and act without switching apps.
           </p>
         </div>
