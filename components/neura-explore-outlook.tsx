@@ -93,13 +93,13 @@ export default function OutlookExplore() {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs text-muted-foreground mb-4 tracking-widest uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-sky-400 inline-block" />
+            <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
             Browser Outlook
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Neura<span className="text-sky-400">.explore</span>
+            Neura.explore
           </h2>
-          <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             An AI-integrated browser built for the way you actually think — search, summarize, and act without switching apps.
           </p>
         </div>
@@ -123,7 +123,7 @@ export default function OutlookExplore() {
                   <span
                     className={`text-[10px] font-semibold px-2 py-0.5 rounded-full border
                       ${active === i
-                        ? "border-sky-500/50 bg-sky-500/15 text-sky-300"
+                        ? "border-orange-500/50 bg-orange-500/15 text-orange-300"
                         : "border-white/10 bg-white/5 text-muted-foreground"
                       }`}
                   >
@@ -142,7 +142,7 @@ export default function OutlookExplore() {
           >
             {/* Image area */}
             <div className="relative w-full aspect-video bg-[#0e0e0e] overflow-hidden">
-              {/* Sky-toned glow */}
+              {/* orange-toned glow */}
               <div
                 className="absolute inset-0 pointer-events-none z-10"
                 style={{
@@ -150,10 +150,10 @@ export default function OutlookExplore() {
                 }}
               />
               {/* Browser chrome */}
-              <div className="absolute top-0 left-0 right-0 h-8 bg-[#161616] border-b border-white/5 flex items-center px-4 gap-2 z-20">
+              <div className="absolute top-0 left-0 right-0 h-8 bg-[#161616] border-b border-white/5 flex items-center px-4 gap-2 z-20 justify-center">
                 <div className="flex-1 max-w-xs mx-4">
                   <div className="bg-white/5 border border-white/8 rounded-md h-5 flex items-center px-3 gap-1.5">
-                    <span className="w-2 h-2 rounded-full border border-sky-400/60 inline-block shrink-0" />
+                    <span className="w-2 h-2 rounded-full border border-orange-400/60 inline-block shrink-0" />
                     <span className="text-[10px] text-muted-foreground truncate">
                       neura.explore / {current.label.toLowerCase().replace(/\s+/g, "-")}
                     </span>
@@ -175,7 +175,7 @@ export default function OutlookExplore() {
             <div className="p-6 flex flex-col sm:flex-row sm:items-center gap-4 border-t border-border">
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="text-xs font-semibold px-2 py-0.5 rounded-full border border-sky-500/40 bg-sky-500/10 text-sky-300">
+                  <span className="text-xs font-semibold px-2 py-0.5 rounded-full border border-orange-500/40 bg-orange-500/10 text-orange-300">
                     {current.tag}
                   </span>
                   <span className="text-xs text-muted-foreground">{current.label}</span>
@@ -191,7 +191,7 @@ export default function OutlookExplore() {
                     onClick={() => setActive(i)}
                     className={`rounded-full transition-all duration-300
                       ${active === i
-                        ? "w-5 h-1.5 bg-sky-400"
+                        ? "w-5 h-1.5 bg-orange-400"
                         : "w-1.5 h-1.5 bg-white/20 hover:bg-white/40"
                       }`}
                   />
