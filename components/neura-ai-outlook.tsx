@@ -164,6 +164,7 @@ export default function Outlook() {
               <div className="absolute top-0 left-0 right-0 h-8 bg-[#161616] border-b border-white/5 flex items-center px-4 gap-2 z-20">
                 <div className="mx-auto flex-1 max-w-xs mx-4">
                   <div className="bg-white/5 border border-white/8 rounded-md h-5 flex items-center px-3">
+                    <span className="w-2 h-2 rounded-full border border-orange-400/60 inline-block shrink-0" />
                     <span className="text-[10px] text-muted-foreground truncate">neura.ai / {current.label.toLowerCase().replace(/\s+/g, "-")}</span>
                   </div>
                 </div>
