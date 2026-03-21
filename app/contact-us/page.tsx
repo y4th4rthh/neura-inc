@@ -61,7 +61,11 @@ export default function ContactPage() {
         >
       <main className="flex-1 mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 w-full">
         <div className="mb-8">
-          <h1 className="md:text-4xl text-3xl font-bold text-foreground mb-2">Get in Touch</h1>
+           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs text-muted-foreground mb-4 tracking-widest uppercase">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
+                                    Get in Touch
+                                  </div>
+          <h1 className="md:text-4xl text-3xl font-bold text-foreground mb-2">Contact Us</h1>
           <p className="text-lg text-muted-foreground">
             Have questions or feedback? We'd love to hear from you. Send us a message and we'll respond as soon as
             possible.

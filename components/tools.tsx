@@ -36,10 +36,14 @@ export default function Tools() {
   ]
 
   return (
-    <section id="tools" className="py-20 md:py-32 px-4">
+    <section id="tools" className="py-20 md:py-24 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">AI Models</h2>
+           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs text-muted-foreground mb-4 tracking-widest uppercase">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
+                                    AI Tools
+                                  </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Neura AI Models</h2>
           <p className="text-lg text-muted-foreground">Choose the perfect AI model for your needs</p>
         </div>
 

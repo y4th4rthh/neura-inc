@@ -59,7 +59,7 @@ export default function Hero() {
 
           <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight">Neura Ai</h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
             Experience powerful AI tools designed for productivity. Chat, summarize, analyze, and create with
             cutting-edge AI models.
           </p>

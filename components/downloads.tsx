@@ -62,8 +62,12 @@ export default function Downloads() {
     <section className="py-20 md:py-32 px-4 bg-card/50">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Download & Access</h2>
-          <p className="text-lg text-muted-foreground">Get Neura.ai on your preferred platform</p>
+           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs text-muted-foreground mb-4 tracking-widest uppercase">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
+                                    Download & Access
+                                  </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Download Neura.ai & Neura.explore</h2>
+          <p className="text-lg text-muted-foreground">Get Neura.ai & Neura.explore on your preferred platform</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
