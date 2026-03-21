@@ -107,7 +107,7 @@ export default function Outlook() {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs text-muted-foreground mb-4 tracking-widest uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-violet-400 inline-block" />
+            <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
             Product Outlook
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">See It In Action</h2>
@@ -135,7 +135,7 @@ export default function Outlook() {
                   <span
                     className={`text-[10px] font-semibold px-2 py-0.5 rounded-full border
                       ${active === i
-                        ? "border-violet-500/50 bg-violet-500/15 text-violet-300"
+                        ? "border-orange-500/50 bg-orange-500/15 text-orange-300"
                         : "border-white/10 bg-white/5 text-muted-foreground"
                       }`}
                   >
@@ -187,7 +187,7 @@ export default function Outlook() {
             <div className="p-6 flex flex-col sm:flex-row sm:items-center gap-4 border-t border-border">
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="text-xs font-semibold px-2 py-0.5 rounded-full border border-violet-500/40 bg-violet-500/10 text-violet-300">
+                  <span className="text-xs font-semibold px-2 py-0.5 rounded-full border border-orange-500/40 bg-orange-500/10 text-orange-300">
                     {current.tag}
                   </span>
                   <span className="text-xs text-muted-foreground">{current.label}</span>
@@ -202,7 +202,7 @@ export default function Outlook() {
                     onClick={() => setActive(i)}
                     className={`rounded-full transition-all duration-300
                       ${active === i
-                        ? "w-5 h-1.5 bg-violet-400"
+                        ? "w-5 h-1.5 bg-orange-400"
                         : "w-1.5 h-1.5 bg-white/20 hover:bg-white/40"
                       }`}
                   />
