@@ -131,14 +131,14 @@ export default function DemoPage() {
                       <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-orange-400" />
                     </span>
                     <span className="text-[11px] text-muted-foreground truncate">
-                      dev-neura-ai.netlify.app
+                      demo-neura.ai.netlify.app
                     </span>
                   </div>
                 </div>
 
                 {/* Right side label */}
                 <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full border border-orange-500/40 bg-orange-500/10 text-orange-300 shrink-0">
-                  Live
+                  Demo
                 </span>
               </div>
 
@@ -172,19 +172,19 @@ export default function DemoPage() {
               </div>
 
               {/* Bottom info bar */}
-              <div className="flex items-center justify-between px-5 py-3 border-t border-white/5 bg-[#161616]">
+              <div className="flex items-center justify-end px-5 py-3 border-t border-white/5 bg-[#161616]">
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                  <span className="text-[11px] text-muted-foreground">Connected to Neura.ai</span>
-                </div>
-                <a
+                   <a
                   href="https://neura-ai.netlify.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[11px] text-orange-400 hover:text-orange-300 transition-colors"
+                  className="text-[11px] text-muted-foreground hover:scale-110 transition-colors"
                 >
-                  Open in new tab ↗
+                  Visit Neura.ai ↗
                 </a>
+                </div>
+               
               </div>
             </div>
 
