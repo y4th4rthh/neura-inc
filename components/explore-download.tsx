@@ -34,8 +34,8 @@ export default function DownloadExplore() {
       ],
     },
     {
-      name: "Neura Explore",
-      description: "AI-integrated browser with sidebar tools",
+      name: "Neura.explore Browser",
+      description: "AI Native Browser with Adblocker",
       icon: "🌐",
       items: [
         {
@@ -63,7 +63,7 @@ export default function DownloadExplore() {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Download & Access</h2>
-          <p className="text-lg text-muted-foreground">Get Neura.ai on your preferred platform</p>
+          <p className="text-lg text-muted-foreground">Get Neura.ai & Neura.explore on your preferred platform</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
