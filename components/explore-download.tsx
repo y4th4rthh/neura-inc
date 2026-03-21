@@ -66,7 +66,7 @@ export default function DownloadExplore() {
                                     <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
                                     Download & Access
                                   </div>
-          <h2 className="text-2xl md:text-5xl font-bold text-foreground mb-4">Download Neura.ai & Neura.explore</h2>
+          <h2 className="text-2xl md:text-5xl font-bold text-foreground mb-4">Download App</h2>
           <p className="text-base md:text-lg text-muted-foreground">Get Neura.ai & Neura.explore on your preferred platform</p>
         </div>
 
