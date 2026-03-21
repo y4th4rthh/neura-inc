@@ -111,7 +111,7 @@ export default function Outlook() {
             Product Outlook
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">See It In Action</h2>
-          <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             A live preview of every tool inside Neura.ai — crafted for speed, depth, and clarity.
           </p>
         </div>
