@@ -174,7 +174,6 @@ export default function Outlook() {
                 src={current.image}
                 alt={current.label}
                 className="w-full h-full object-cover object-top"
-                style={{ marginTop: "2rem" }}
                 onError={(e) => {
                   // fallback placeholder if image doesn't load
                   const target = e.target as HTMLImageElement
