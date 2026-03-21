@@ -1,6 +1,7 @@
 "use client"
 import Header from "@/components/header"
 import Hero from "@/components/hero"
+import Outlook from "@/components/neura-ai-outlook"
 import Features from "@/components/features"
 import Tools from "@/components/tools"
 import Downloads from "@/components/downloads"
@@ -27,6 +28,7 @@ export default function Home() {
         <Hero />
         <Features />
         <Tools />
+        <Outlook/>
         <Downloads />
         <Footer />
         </div>
