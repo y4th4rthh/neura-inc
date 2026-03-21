@@ -53,8 +53,7 @@ export default function ExploreHero() {
           <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight">Neura Explore</h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-            The AI-integrated browser that brings Neura.ai tools directly into your browsing experience. Faster,
-            smarter, better.
+            AI Native browser with built-in Adblocker and AI assistant featuring a hybrid search architecture that blends traditional web results with real-time AI insights.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
