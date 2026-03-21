@@ -2,7 +2,9 @@
 
 import Header from "@/components/header"
 import ExploreHero from "@/components/explore-hero"
+import OutlookExplore from "@components/neura-explore-outlook"
 import ExploreFeatures from "@/components/explore-features"
+import DownloadExplore from "@/components/explore-download"
 import Footer from "@/components/footer"
 
 export default function ExplorePage() {
@@ -25,6 +27,8 @@ export default function ExplorePage() {
         >
       <ExploreHero />
       <ExploreFeatures />
+      <OutlookExplore />
+      <DownloadExplore />
       <Footer />
       </div>
       </div>
