@@ -167,7 +167,10 @@ export default function OutlookExplore() {
     <Image
       src={current.image}
       alt={current.label}
-      className="w-full h-full object-cover object-top"
+      fill
+  sizes="(max-width: 1024px) 100vw, 70vw"
+  quality={90}
+      className=" object-cover object-top"
     />
   </div>
             </div>
