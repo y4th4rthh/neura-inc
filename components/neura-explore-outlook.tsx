@@ -1,7 +1,6 @@
 "use client"
 import { useState } from "react"
 import { Card } from "@/components/ui/card"
-import Image from "next/image"
 
 const previews = [
   {
@@ -164,14 +163,7 @@ export default function OutlookExplore() {
 
        
                <div className="absolute inset-0 top-8">
-    <Image
-      src={current.image}
-      alt={current.label}
-      fill
-  sizes="(max-width: 1024px) 100vw, 70vw"
-  quality={90}
-      className=" object-cover object-top"
-    />
+    <img src={current.image} alt={current.label} className="w-full h-full object-cover object-top" onError={(e) => { const target = e.target as HTMLImageElement target.style.display = "none" }} />
   </div>
             </div>
 
