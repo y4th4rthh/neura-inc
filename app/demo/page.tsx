@@ -73,7 +73,6 @@ export default function DemoPage() {
         >
           <main className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
 
-            {/* Page header */}
             <div className="mb-10 text-center fade-up">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs text-muted-foreground mb-4 tracking-widest uppercase">
                 <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
@@ -87,7 +86,6 @@ export default function DemoPage() {
               </p>
             </div>
 
-            {/* CTA buttons */}
             <div className="gap-3 flex flex-col sm:flex-row justify-center pb-10 fade-up" style={{ animationDelay: "0.08s" }}>
               <a href={link} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
@@ -101,12 +99,10 @@ export default function DemoPage() {
               </a>
             </div>
 
-            {/* ── Iframe container styled like Outlook card ── */}
             <div
               className="fade-up overflow-hidden rounded-2xl border border-border bg-[#0e0e0e] shadow-2xl"
               style={{ animationDelay: "0.14s" }}
             >
-              {/* Glow */}
               <div
                 className="pointer-events-none absolute inset-x-0 top-0 h-48 z-0"
                 style={{
@@ -115,17 +111,16 @@ export default function DemoPage() {
                 }}
               />
 
-              {/* Browser chrome */}
               <div className="relative z-10 flex items-center gap-2 px-4 h-10 bg-[#161616] border-b border-white/5">
-                {/* Traffic lights */}
+      
                 <span className="w-3 h-3 rounded-full bg-[#ff5f57]" />
                 <span className="w-3 h-3 rounded-full bg-[#febc2e]" />
                 <span className="w-3 h-3 rounded-full bg-[#28c840]" />
 
-                {/* URL bar */}
+            
                 <div className="flex-1 flex justify-center px-4">
                   <div className="w-full max-w-sm bg-white/5 border border-white/8 rounded-md h-6 flex items-center gap-2 px-3">
-                    {/* Live indicator */}
+            
                     <span className="relative flex h-1.5 w-1.5 shrink-0">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75" />
                       <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-orange-400" />
@@ -136,23 +131,23 @@ export default function DemoPage() {
                   </div>
                 </div>
 
-                {/* Right side label */}
+            
                 <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full border border-orange-500/40 bg-orange-500/10 text-orange-300 shrink-0">
                   Demo
                 </span>
               </div>
 
-              {/* Iframe area */}
+            
               <div className="relative">
-                {/* Loading overlay */}
+         
                 {isLoading && (
                   <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-[#0e0e0e] gap-5">
-                    {/* Spinner ring */}
+              
                     <div className="relative h-14 w-14">
                       <div className="absolute inset-0 rounded-full border-4 border-white/5" />
                       <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-orange-500 animate-spin" />
                     </div>
-                    {/* Shimmer lines */}
+           
                     <div className="flex flex-col gap-2 w-48">
                       <div className="shimmer-bar h-2 rounded-full w-full" />
                       <div className="shimmer-bar h-2 rounded-full w-3/4 mx-auto" />
@@ -171,7 +166,6 @@ export default function DemoPage() {
                 />
               </div>
 
-              {/* Bottom info bar */}
               <div className="flex items-center justify-end px-5 py-3 border-t border-white/5 bg-[#161616]">
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
@@ -188,7 +182,6 @@ export default function DemoPage() {
               </div>
             </div>
 
-            {/* Feature cards */}
             <div className="mt-10 grid gap-4 md:grid-cols-3 fade-up" style={{ animationDelay: "0.2s" }}>
               {[
                 { icon: "⚡", title: "Lightning Fast", desc: "Experience ultra-fast AI conversations with minimal latency" },

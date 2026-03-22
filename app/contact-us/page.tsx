@@ -55,8 +55,8 @@ export default function ContactPage() {
   </style>
         <div className="overflow-scroll hide-scrollbar"
          style={{
-    scrollbarWidth: 'none',     // Firefox
-    msOverflowStyle: 'none'     // IE/Edge legacy
+    scrollbarWidth: 'none',     
+    msOverflowStyle: 'none'    
   }}
         >
       <main className="flex-1 mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 w-full">
@@ -87,7 +87,7 @@ export default function ContactPage() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name Field */}
+        
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                   Name
@@ -103,7 +103,6 @@ export default function ContactPage() {
                 />
               </div>
 
-              {/* Email Field */}
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                   Email Address
@@ -119,7 +118,6 @@ export default function ContactPage() {
                 />
               </div>
 
-              {/* Message Field */}
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                   Message
@@ -135,14 +133,12 @@ export default function ContactPage() {
                 />
               </div>
 
-              {/* Error Message */}
               {error && (
                 <div className="rounded-lg bg-red-500/10 border border-red-500/30 p-3 text-red-600 text-sm">
                   {error}
                 </div>
               )}
 
-              {/* Submit Button */}
               <button
                 type="submit"
                 disabled={loading}

@@ -122,8 +122,8 @@ export default function StatusPage() {
         </style>
         <div className="overflow-scroll hide-scrollbar"
           style={{
-            scrollbarWidth: 'none',     // Firefox
-            msOverflowStyle: 'none'     // IE/Edge legacy
+            scrollbarWidth: 'none',    
+            msOverflowStyle: 'none'     
           }}
         >
           
@@ -154,13 +154,13 @@ export default function StatusPage() {
         </style>
         <div className="overflow-scroll hide-scrollbar"
           style={{
-            scrollbarWidth: 'none',     // Firefox
-            msOverflowStyle: 'none'     // IE/Edge legacy
+            scrollbarWidth: 'none',   
+            msOverflowStyle: 'none'     
           }}
         >
 
           <main className="flex-1 mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 w-full">
-            {/* Header Section */}
+           
             <div className="mb-12">
               <div className="flex items-center justify-between mb-4">
                 <div>
@@ -175,7 +175,7 @@ export default function StatusPage() {
               )}
             </div>
 
-            {/* Status Cards Grid */}
+           
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {statuses.map((backend) => (
                 <div
@@ -220,7 +220,7 @@ export default function StatusPage() {
               ))}
             </div>
 
-            {/* Info Section */}
+        
             <div className="mt-12 rounded-lg border border-border bg-card p-8">
               <h2 className="text-xl font-semibold text-foreground mb-4">About This Status Page</h2>
               <div className="grid gap-6 md:grid-cols-2">

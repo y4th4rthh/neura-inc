@@ -21,8 +21,8 @@ export default function ExplorePage() {
   </style>
         <div className="overflow-scroll hide-scrollbar"
          style={{
-    scrollbarWidth: 'none',     // Firefox
-    msOverflowStyle: 'none'     // IE/Edge legacy
+    scrollbarWidth: 'none',     
+    msOverflowStyle: 'none'  
   }}
         >
       <ExploreHero />

@@ -104,7 +104,7 @@ export default function Outlook() {
 
       <div className="container mx-auto max-w-6xl">
 
-        {/* Header */}
+       
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs text-muted-foreground mb-4 tracking-widest uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
@@ -116,10 +116,10 @@ export default function Outlook() {
           </p>
         </div>
 
-        {/* Main layout */}
+    
         <div className="flex flex-col lg:flex-row gap-6 items-start">
 
-          {/* Sidebar tabs */}
+       
           <div className="lg:w-64 w-full flex lg:flex-col flex-row lg:overflow-visible overflow-x-auto gap-2 shrink-0 pb-1 hide-scrollbar">
             {previews.map((p, i) => (
               <button
@@ -147,20 +147,20 @@ export default function Outlook() {
             ))}
           </div>
 
-          {/* Preview card */}
+        
           <Card
             key={active}
             className="preview-fade flex-1 bg-background border-border overflow-hidden rounded-2xl"
           >
-            {/* Image area */}
+      
             <div className="relative w-full aspect-video bg-[#0e0e0e] overflow-hidden">
-              {/* Glow */}
+           
               <div className="absolute inset-0 pointer-events-none z-10"
                 style={{
                   background: "radial-gradient(ellipse 60% 40% at 50% 0%, rgba(139,92,246,0.08) 0%, transparent 70%)"
                 }}
               />
-              {/* Browser chrome bar */}
+            
               <div className="absolute top-0 left-0 right-0 h-8 bg-[#161616] border-b border-white/5 flex items-center px-4 gap-2 z-20">
                 <div className="mx-auto flex-1 max-w-xs mx-4">
                   <div className="bg-white/5 border border-white/8 rounded-md h-5 flex gap-2 items-center px-3">
@@ -169,14 +169,14 @@ export default function Outlook() {
                   </div>
                 </div>
               </div>
-              {/* Screenshot */}
+           
               <div className="absolute inset-0 top-8">
               <img
                 src={current.image}
                 alt={current.label}
                 className="w-full h-full object-cover object-top"
                 onError={(e) => {
-                  // fallback placeholder if image doesn't load
+                 
                   const target = e.target as HTMLImageElement
                   target.style.display = "none"
                 }}
@@ -184,7 +184,7 @@ export default function Outlook() {
                  </div>
             </div>
 
-            {/* Info bar */}
+      
             <div className="p-6 flex flex-col sm:flex-row sm:items-center gap-4 border-t border-border">
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
@@ -195,8 +195,7 @@ export default function Outlook() {
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">{current.description}</p>
               </div>
-              {/* Navigation dots */}
-              <div className="flex items-center gap-1.5 shrink-0">
+              <div className="hidden items-center gap-1.5 shrink-0">
                 {previews.map((_, i) => (
                   <button
                     key={i}

@@ -167,7 +167,6 @@ export default function ChangelogsPage() {
 
         <div className="overflow-scroll hide-scrollbar" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
 
-          {/* Page header */}
           <div className="mx-auto text-center max-w-4xl px-4 pt-14 pb-10 sm:px-6 lg:px-8 fade-up">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs text-muted-foreground mb-5 tracking-widest uppercase">
               <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
@@ -181,7 +180,6 @@ export default function ChangelogsPage() {
 
           <main className="mx-auto max-w-4xl px-4 pb-16 sm:px-6 lg:px-8">
 
-            {/* Loading */}
             {isLoading && (
               <div className="flex flex-col items-center justify-center py-24 gap-4 fade-up">
                 <div className="relative h-12 w-12">
@@ -192,7 +190,6 @@ export default function ChangelogsPage() {
               </div>
             )}
 
-            {/* Error */}
             {error && !isLoading && (
               <div className="rounded-xl border border-red-500/20 bg-red-500/5 p-6 fade-up">
                 <p className="text-red-400 font-medium">{error}</p>
@@ -202,17 +199,14 @@ export default function ChangelogsPage() {
               </div>
             )}
 
-            {/* Empty */}
             {!isLoading && !error && releases.length === 0 && (
               <div className="rounded-xl border border-border bg-card p-12 text-center fade-up">
                 <p className="text-muted-foreground">No releases found.</p>
               </div>
             )}
 
-            {/* Release timeline */}
             {!isLoading && !error && releases.length > 0 && (
               <div className="relative">
-                {/* Vertical line */}
                 <div className="absolute left-[11px] top-2 bottom-2 w-px bg-white/6 hidden sm:block" />
 
                 <div className="space-y-4">
@@ -226,7 +220,6 @@ export default function ChangelogsPage() {
                         className="fade-up sm:pl-10 relative"
                         style={{ animationDelay: `${index * 0.05}s` }}
                       >
-                        {/* Timeline dot */}
                         <div className={`absolute left-0 top-5 w-[23px] h-[23px] rounded-full border-2 items-center justify-center hidden sm:flex
                           ${deprecated
                             ? "border-red-500/40 bg-red-500/10"
@@ -240,12 +233,10 @@ export default function ChangelogsPage() {
                           `} />
                         </div>
 
-                        {/* Card */}
                         <div
                           className={`release-card rounded-2xl border border-border bg-[#161616] overflow-hidden cursor-pointer ${isOpen ? "active" : ""}`}
                           onClick={() => setExpanded(isOpen ? null : release.id)}
                         >
-                          {/* Card header — always visible */}
                           <div className="px-6 py-5 flex items-start justify-between gap-4">
                             <div className="flex-1 min-w-0">
                               <div className="flex flex-wrap items-center gap-2 mb-1.5">
@@ -281,7 +272,6 @@ export default function ChangelogsPage() {
                               </div>
                             </div>
 
-                            {/* Chevron */}
                             <div className={`shrink-0 mt-1 w-7 h-7 rounded-lg border border-white/8 bg-white/5 flex items-center justify-center transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}>
                               <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                                 <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-muted-foreground" />
@@ -289,13 +279,11 @@ export default function ChangelogsPage() {
                             </div>
                           </div>
 
-                          {/* Expandable body */}
                           {isOpen && (
                             <div onClick={(e) => e.stopPropagation()}>
                               <div className="h-px bg-white/6 mx-6" />
 
                               <div className="px-6 py-5">
-                                {/* Release notes */}
                                 <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
                                   Release Notes
                                 </p>
@@ -306,7 +294,6 @@ export default function ChangelogsPage() {
                                   }
                                 </div>
 
-                                {/* Downloads */}
                                 {release.assets.length > 0 && (
                                   <>
                                     <div className="h-px bg-white/6 mb-5" />

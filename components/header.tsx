@@ -16,7 +16,7 @@ import { useState } from "react"
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false)
-  const [isLoggedIn, setIsLoggedIn] = useState(false) // Set based on your auth logic
+  const [isLoggedIn, setIsLoggedIn] = useState(false) 
 
   const navLinks = [
     { href: "/", label: "Platform", icon: Zap, title: "Neura.ai"},
@@ -40,24 +40,21 @@ export default function Sidebar() {
   const toggleSidebar = () => setIsOpen(!isOpen)
 
   const handleNewChatClick = () => {
-    // Your new chat logic here
+   
     console.log("New chat clicked")
   }
 
   const handleNavigationClick = () => {
-    // Close sidebar on mobile when navigating
     if (window.innerWidth < 1024) {
       setIsOpen(false)
     }
   }
 
   const clearHistory = () => {
-    // Your clear history logic here
     console.log("History cleared")
   }
 
   const handleLogout = () => {
-    // Your logout logic here
     setIsLoggedIn(false)
     setIsOpen(false)
   }
@@ -161,7 +158,6 @@ export default function Sidebar() {
               
             </div>
 
-            {/* Navigation Links */}
            <nav className="flex flex-col gap-5">
                   {navCollapseLinks.map((link) => {
                     const Icon = link.icon;
@@ -182,7 +178,6 @@ export default function Sidebar() {
                   })}
                 </nav>
 
-            {/* CTA Button */}
             <div className="mt-4 pt-4 border-t border-white/10">
               <Button
                 onClick={() => {

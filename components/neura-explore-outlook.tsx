@@ -90,7 +90,7 @@ export default function OutlookExplore() {
 
       <div className="container mx-auto max-w-6xl">
 
-        {/* Header */}
+    
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs text-muted-foreground mb-4 tracking-widest uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
@@ -104,10 +104,10 @@ export default function OutlookExplore() {
           </p>
         </div>
 
-        {/* Main layout */}
+     
         <div className="flex flex-col lg:flex-row gap-6 items-start">
 
-          {/* Sidebar tabs */}
+     
           <div className="lg:w-56 w-full flex lg:flex-col flex-row lg:overflow-visible overflow-x-auto gap-1.5 shrink-0 pb-1 hide-scrollbar">
             {previews.map((p, i) => (
               <button
@@ -135,21 +135,21 @@ export default function OutlookExplore() {
             ))}
           </div>
 
-          {/* Preview card */}
+      
           <Card
             key={active}
             className="explore-fade flex-1 bg-background border-border overflow-hidden rounded-2xl"
           >
-            {/* Image area */}
+      
             <div className="relative w-full aspect-video bg-[#0e0e0e] overflow-hidden">
-              {/* orange-toned glow */}
+    
               <div
                 className="absolute inset-0 pointer-events-none z-10"
                 style={{
                   background: "radial-gradient(ellipse 60% 40% at 50% 0%, rgba(56,189,248,0.07) 0%, transparent 70%)"
                 }}
               />
-              {/* Browser chrome */}
+          
               <div className="absolute top-0 left-0 right-0 h-8 bg-[#161616] border-b border-white/5 flex items-center px-4 gap-2 z-20 justify-center">
                 <div className="flex-1 max-w-xs mx-4">
                   <div className="bg-white/5 border border-white/8 rounded-md h-5 flex items-center px-3 gap-1.5">
@@ -161,7 +161,7 @@ export default function OutlookExplore() {
                 </div>
               </div>
 
-              {/* Screenshot */}
+       
                <div className="absolute inset-0 top-8">
     <img
       src={current.image}
@@ -171,7 +171,7 @@ export default function OutlookExplore() {
   </div>
             </div>
 
-            {/* Info bar */}
+      
             <div className="p-6 flex flex-col sm:flex-row sm:items-center gap-4 border-t border-border">
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
@@ -183,8 +183,8 @@ export default function OutlookExplore() {
                 <p className="text-sm text-muted-foreground leading-relaxed">{current.description}</p>
               </div>
 
-              {/* Dot navigation */}
-              <div className="flex items-center gap-1.5 shrink-0 flex-wrap max-w-[120px] justify-end">
+          
+              <div className="hidden items-center gap-1.5 shrink-0 flex-wrap max-w-[120px] justify-end">
                 {previews.map((_, i) => (
                   <button
                     key={i}
