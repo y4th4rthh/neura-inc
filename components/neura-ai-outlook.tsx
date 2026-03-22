@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
 import { Card } from "@/components/ui/card"
+import Image from "next/image"
 
 const previews = [
   {
@@ -171,7 +172,7 @@ export default function Outlook() {
               </div>
            
               <div className="absolute inset-0 top-8">
-              <img
+              <Image
                 src={current.image}
                 alt={current.label}
                 className="w-full h-full object-cover object-top"
