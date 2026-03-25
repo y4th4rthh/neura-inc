@@ -75,7 +75,7 @@ export default function Sidebar() {
         } left-0 z-30 lg:z-0
   ${isOpen
           ? "w-72"
-          : "w-[40px] md:w-[60px] opacity-100"
+          : "w-[50px] md:w-[60px] opacity-100"
         }
   flex flex-col md:transition-[width] md:transition transition-none duration-300 ease-in-out  bg-[#121212] border-r border-white/10`}
     >
@@ -90,10 +90,18 @@ export default function Sidebar() {
 
                 <button
                   onClick={toggleSidebar}
-                  className="sidebar-toggle pb-4 text-white/70 hover:text-white cursor-pointer transition-colors"
+                  className="hidden md:sidebar-toggle pb-4 text-white/70 hover:text-white cursor-pointer transition-colors"
                   title="Open sidebar"
                 >
                   <Menu size={20} />
+                </button>
+
+                 <button
+                  onClick={toggleSidebar}
+                  className="sidebar-toggle md:hidden pb-4 text-white/70 hover:text-white cursor-pointer transition-colors"
+                  title="Open sidebar"
+                >
+                  <Menu size={18} />
                 </button>
 
                 <nav className="hidden md:flex flex-col gap-5">
@@ -128,7 +136,7 @@ export default function Sidebar() {
                         title={link.title}
                         className="group relative flex items-center gap-2 p-1.5 rounded-lg transition-colors text-gray-400 hover:text-white"
                       >
-                        <Icon size={18} />
+                        <Icon size={16} />
 
                         <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-[#ff6b00] to-[#ff8c42] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                       </Link>
@@ -145,9 +153,19 @@ export default function Sidebar() {
                   window.location.href = "https://neura-ai.netlify.app/"
                 }}
                 title="Get started"
-                className="w-full py-2 px-2 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm font-medium hover:bg-red-500/20 hover:border-red-500/50 transition-all duration-200 flex items-center justify-center gap-2"
+                className="w-full py-2 px-2 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm font-medium hover:bg-red-500/20 hover:border-red-500/50 transition-all duration-200 hidden md:flex items-center justify-center gap-2"
               >
                 <Sparkles size={16} />
+
+              </Button>
+              <Button
+                onClick={() => {
+                  window.location.href = "https://neura-ai.netlify.app/"
+                }}
+                title="Get started"
+                className="w-full py-1 px-1 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm font-medium hover:bg-red-500/20 hover:border-red-500/50 transition-all duration-200 flex md:hidden items-center justify-center gap-2"
+              >
+                <Sparkles size={14} />
 
               </Button>
             </div>
