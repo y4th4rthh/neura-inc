@@ -8,7 +8,7 @@ import { useEffect, useState } from "react"
 export default function Hero() {
 
    const [link, setLink] = useState("");
-  const [label, setLabel] = useState("");
+  const [label, setLabel] = useState("Download App");
 
   useEffect(() => {
     const ua = navigator.userAgent.toLowerCase();
@@ -25,12 +25,12 @@ export default function Hero() {
 
       if (ua.includes("fedora") || ua.includes("rhel") || ua.includes("centos")) {
         setLink(base + "neura.ai.rpm");
-        setLabel("Download (.rpm)");
+        setLabel("Download Linux (.rpm)");
       } 
       
       else if (ua.includes("ubuntu") || ua.includes("debian")) {
         setLink(base + "neura.ai.deb");
-        setLabel("Download (.deb)");
+        setLabel("Download Linux (.deb)");
       } 
       
       else {
