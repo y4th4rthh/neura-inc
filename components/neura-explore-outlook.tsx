@@ -163,7 +163,7 @@ export default function OutlookExplore() {
 
        
                <div className="absolute inset-0 top-8">
-    <img src={current.image} alt={current.label} className="w-full h-full object-cover object-top" onError={(e) => { const target = e.target as HTMLImageElement target.style.display = "none" }} />
+    <img src={current.image} alt={current.label} className="w-full h-full object-cover object-top" onError={(e) => { const target = e.target as HTMLImageElement; target.style.display = "none"; }} />
   </div>
             </div>
 
