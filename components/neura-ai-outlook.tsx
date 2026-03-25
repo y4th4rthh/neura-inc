@@ -127,7 +127,7 @@ export default function Outlook() {
         <div className="flex flex-col lg:flex-row gap-6 items-start">
 
        
-          <div className="lg:w-64 w-full flex lg:flex-col flex-row lg:overflow-visible overflow-x-auto gap-2 shrink-0 pb-1 hide-scrollbar">
+          <div className="lg:w-64 w-full flex lg:flex-col flex-row lg:overflow-visible overflow-x-auto gap-1.5 shrink-0 pb-1 hide-scrollbar">
             {previews.map((p, i) => (
               <button
                 key={p.id}
