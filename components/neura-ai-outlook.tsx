@@ -20,7 +20,7 @@ const previews = [
   {
     id: 3,
     label: "neura.vista.1.o",
-    tag: "Vision",
+    tag: "Web Summarizer",
     description: "Web/Reddit Content Summarizer to get analysis, summary, and tldrs about posts and content.",
     image: "https://raw.githubusercontent.com/y4th4rthh/neura.ai-releases/main/public/nai-3.png",
   },
