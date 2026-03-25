@@ -36,6 +36,15 @@ export default function Sidebar() {
     { href: "/contact-us", label: "Contact Us", icon: Mail,title: "Neura Support" },
   ];
 
+  const navSmCollapseLinks = [
+    { href: "/", label: "Platform", icon: Zap, title: "Neura.ai"},
+    { href: "/explore", label: "Explore", icon: Atom ,title: "Neura.explore"},
+    { href: "/changelogs", label: "Changelogs", icon: ScrollText,title: "Changelogs" },
+    // { href: "/status", label: "Neura Status", icon: Activity,title: "Neura Status" },
+    // { href: "/demo", label: "Try it?", icon: HelpCircle,title: "Demo?" },
+    { href: "/contact-us", label: "Contact Us", icon: Mail,title: "Neura Support" },
+  ];
+
 
   const toggleSidebar = () => setIsOpen(!isOpen)
 
@@ -66,7 +75,7 @@ export default function Sidebar() {
         } left-0 z-30 lg:z-0
   ${isOpen
           ? "w-72"
-          : "w-[60px] opacity-100"
+          : "w-[40px] md:w-[60px] opacity-100"
         }
   flex flex-col md:transition-[width] md:transition transition-none duration-300 ease-in-out  bg-[#121212] border-r border-white/10`}
     >
@@ -87,8 +96,28 @@ export default function Sidebar() {
                   <Menu size={20} />
                 </button>
 
-                <nav className="flex flex-col gap-5">
+                <nav className="hidden md:flex flex-col gap-5">
                   {navCollapseLinks.map((link) => {
+                    const Icon = link.icon;
+
+                    return (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={handleNavigationClick}
+                        title={link.title}
+                        className="group relative flex items-center gap-2 p-1.5 rounded-lg transition-colors text-gray-400 hover:text-white"
+                      >
+                        <Icon size={18} />
+
+                        <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-[#ff6b00] to-[#ff8c42] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                      </Link>
+                    );
+                  })}
+                </nav>
+
+                 <nav className="flex md:hidden flex-col gap-5">
+                  {navSmCollapseLinks.map((link) => {
                     const Icon = link.icon;
 
                     return (
@@ -158,8 +187,28 @@ export default function Sidebar() {
               
             </div>
 
-           <nav className="flex flex-col gap-5">
+           <nav className="hidden md:flex flex-col gap-5">
                   {navCollapseLinks.map((link) => {
+                    const Icon = link.icon;
+
+                    return (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={handleNavigationClick}
+                        title={link.title}
+                        className="group relative flex items-center gap-4 p-1.5 rounded-lg transition-colors text-gray-400 hover:text-white"
+                      >
+                        <Icon size={18} /> {link.label}
+
+                        <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-[#ff6b00] to-[#ff8c42] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                      </Link>
+                    );
+                  })}
+                </nav>
+
+            <nav className="flex md:hidden flex-col gap-5">
+                  {navSmCollapseLinks.map((link) => {
                     const Icon = link.icon;
 
                     return (
