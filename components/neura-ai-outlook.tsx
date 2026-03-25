@@ -47,13 +47,20 @@ const previews = [
   },
   {
     id: 7,
+    label: "neura.infinity.1.o",
+    tag: "Snap Analyzer",
+    description: "Upload docs and get instant answers. Ask questions, extract insights, and share results in real-time.",
+    image: "https://raw.githubusercontent.com/y4th4rthh/neura.ai-releases/main/public/nai-6.png",
+  },
+  {
+    id: 8,
     label: "AI Studio",
     tag: "Custom GPTs",
     description: "Build, configure, and deploy your own specialized AI agents from scratch.",
     image: "https://raw.githubusercontent.com/y4th4rthh/neura.ai-releases/main/public/nai-7.png",
   },
   {
-    id: 8,
+    id: 9,
     label: "Chat Sessions",
     tag: "Sidebar Insights",
     description: "Rich session history with sidebar analytics, context tracking, and smart insights.",
