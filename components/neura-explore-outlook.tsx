@@ -72,6 +72,13 @@ export default function OutlookExplore() {
   const [active, setActive] = useState(0)
   const current = previews[active]
 
+  useEffect(() => {
+  previews.forEach((item) => {
+    const img = new Image()
+    img.src = item.image
+  })
+}, [])
+
   return (
     <section id="outlook-explore" className="py-20 md:py-32 px-4 bg-card/50">
       <style>{`
