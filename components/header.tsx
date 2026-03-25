@@ -90,7 +90,7 @@ export default function Sidebar() {
 
                 <button
                   onClick={toggleSidebar}
-                  className="hidden md:sidebar-toggle pb-4 text-white/70 hover:text-white cursor-pointer transition-colors"
+                  className="hidden md:block md:sidebar-toggle pb-4 text-white/70 hover:text-white cursor-pointer transition-colors"
                   title="Open sidebar"
                 >
                   <Menu size={20} />
