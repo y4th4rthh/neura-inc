@@ -163,7 +163,7 @@ export default function Sidebar() {
                   window.location.href = "https://neura-ai.netlify.app/"
                 }}
                 title="Get started"
-                className="w-full py-1 px-1 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm font-medium hover:bg-red-500/20 hover:border-red-500/50 transition-all duration-200 flex md:hidden items-center justify-center gap-2"
+                className="w-fit py-1 px-1 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm font-medium hover:bg-red-500/20 hover:border-red-500/50 transition-all duration-200 flex md:hidden items-center justify-center gap-2"
               >
                 <Sparkles size={14} />
 
