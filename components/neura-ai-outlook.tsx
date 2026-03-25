@@ -50,7 +50,7 @@ const previews = [
     label: "neura.infinity.1.o",
     tag: "Snap Analyzer",
     description: "Upload docs and get instant answers. Ask questions, extract insights, and share results in real-time.",
-    image: "https://raw.githubusercontent.com/y4th4rthh/neura.ai-releases/main/public/nai-6.png",
+    image: "https://raw.githubusercontent.com/y4th4rthh/neura.ai-releases/main/public/nai-9.png",
   },
   {
     id: 8,
