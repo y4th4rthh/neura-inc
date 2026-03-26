@@ -27,14 +27,17 @@ interface Release {
 }
 
 const assetIcon = (name: string) => {
-  if (name.endsWith(".exe")) return "🪟"
-  if (name.endsWith(".dmg") || name.endsWith(".pkg")) return "🍎"
-  if (name.endsWith(".deb")) return "🐧"
-  if (name.endsWith(".rpm")) return "🎩"
-  if (name.endsWith(".AppImage")) return "📦"
-  if (name.endsWith(".apk")) return "🤖"
-  if (name.endsWith(".zip") || name.endsWith(".tar.gz")) return "🗜️"
-  return "📁"
+  const cls = "w-5 h-5 inline-block align-middle"
+
+  if (name.endsWith(".exe")) return <img src="/logo/exe.png" className={cls} />
+  if (name.endsWith(".dmg") || name.endsWith(".pkg")) return <img src="/logo/exe.png" className={cls} />
+  if (name.endsWith(".deb")) return <img src="/logo/deb.png" className={cls} />
+  if (name.endsWith(".rpm")) return <img src="/logo/rpm.png" className={cls} />
+  if (name.endsWith(".AppImage")) return <img src="/logo/linux.png" className={cls} />
+  if (name.endsWith(".apk")) return <img src="/logo/apk.png" className={cls} />
+  if (name.endsWith(".aab")) return <img src="/logo/aab.png" className={cls} />
+  if (name.endsWith(".zip") || name.endsWith(".tar.gz")) return <img src="/logo/exe.png" className={cls} />
+  return <img src="/logo/msi.png" className={cls} />
 }
 
 export default function ChangelogsPage() {
