@@ -4,8 +4,6 @@ import { useState } from "react"
 
 import type React from "react"
 import axios from "axios"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
 
 export default function ContactPage() {
   const [name, setName] = useState("")
@@ -43,7 +41,6 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] flex ">
-      <Header />
 
  <div className="flex-1 flex flex-col h-[calc(100vh-16px)] relative m-2  bg-[#121212] rounded-xl border border-white/10 overflow-hidden transition-[margin,border-radius] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
          <style>
@@ -176,7 +173,6 @@ export default function ContactPage() {
         </div>
       </main>
 
-      <Footer />
     </div>
     </div>
     </div>
