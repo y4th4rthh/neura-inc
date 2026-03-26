@@ -5,8 +5,6 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { Spinner } from "@/components/ui/spinner"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
 import Link from "next/link"
 import type { JSX } from "react/jsx-runtime"
 
@@ -29,15 +27,15 @@ interface Release {
 const assetIcon = (name: string) => {
   const cls = "w-5 h-5 inline-block align-middle"
 
-  if (name.endsWith(".exe")) return <img src="/logo/exe.png" className={cls} />
-  if (name.endsWith(".dmg") || name.endsWith(".pkg")) return <img src="/logo/exe.png" className={cls} />
+  if (name.endsWith(".exe")) return <img src="/logo/exe.png" className={"w-4 h-4 inline-block align-middle"} />
+  if (name.endsWith(".dmg") || name.endsWith(".pkg")) return <img src="/logo/exe.png" className={"w-4 h-4 inline-block align-middle"} />
   if (name.endsWith(".deb")) return <img src="/logo/deb.png" className={cls} />
   if (name.endsWith(".rpm")) return <img src="/logo/rpm.png" className={cls} />
   if (name.endsWith(".AppImage")) return <img src="/logo/linux.png" className={cls} />
-  if (name.endsWith(".apk")) return <img src="/logo/apk.png" className={cls} />
-  if (name.endsWith(".aab")) return <img src="/logo/aab.png" className={cls} />
+  if (name.endsWith(".apk")) return <img src="/logo/apk.png" className={"w-6 h-6 inline-block align-middle"} />
+  if (name.endsWith(".aab")) return <img src="/logo/aab.png" className={"w-6 h-6 inline-block align-middle"} />
   if (name.endsWith(".zip") || name.endsWith(".tar.gz")) return <img src="/logo/exe.png" className={cls} />
-  return <img src="/logo/msi.png" className={cls} />
+  return <img src="/logo/msi.png" className={"w-5 h-5 inline-block align-middle"} />
 }
 
 export default function ChangelogsPage() {
@@ -153,7 +151,6 @@ export default function ChangelogsPage() {
 
   return (
     <div className="min-h-screen flex bg-[#0a0a0a]">
-      <Header />
 
       <div className="flex-1 flex flex-col h-[calc(100vh-16px)] relative m-2 bg-[#121212] rounded-xl border border-white/10 overflow-hidden transition-[margin,border-radius] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
         <style>{`
@@ -345,7 +342,6 @@ export default function ChangelogsPage() {
             )}
           </main>
 
-          <Footer />
         </div>
       </div>
     </div>
