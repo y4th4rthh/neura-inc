@@ -4,6 +4,8 @@ import { useState } from "react"
 
 import type React from "react"
 import axios from "axios"
+import Header from "@/components/header"
+import Footer from "@/components/footer"
 
 export default function ContactPage() {
   const [name, setName] = useState("")
@@ -40,23 +42,37 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#1a1a1a] flex flex-col scrollbar-hide"
-       style={{
-    scrollbarWidth: "thin",
-    scrollbarColor: "#444 #1a1a1a"
-  }}
-      >
+    <div className="min-h-screen bg-[#0a0a0a] flex ">
+      <Header />
 
+ <div className="flex-1 flex flex-col h-[calc(100vh-16px)] relative m-2  bg-[#121212] rounded-xl border border-white/10 overflow-hidden transition-[margin,border-radius] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+         <style>
+    {`
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    `}
+  </style>
+        <div className="overflow-scroll hide-scrollbar"
+         style={{
+    scrollbarWidth: 'none',     
+    msOverflowStyle: 'none'    
+  }}
+        >
       <main className="flex-1 mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 w-full">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-foreground mb-2">Get in Touch</h1>
-          <p className="text-lg text-muted-foreground">
+        <div className="mb-8 text-center">
+           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs text-muted-foreground mb-4 tracking-widest uppercase">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
+                                    Get in Touch
+                                  </div>
+          <h1 className="md:text-4xl text-2xl font-bold text-foreground mb-2">Contact Us</h1>
+          <p className="text-base md:text-lg text-muted-foreground">
             Have questions or feedback? We'd love to hear from you. Send us a message and we'll respond as soon as
             possible.
           </p>
         </div>
 
-        <div className="rounded-lg border border-border bg-[#121212] p-8 shadow-lg">
+        <div className="rounded-lg border border-border bg-card p-8 shadow-lg">
           {success ? (
             <div className="flex flex-col items-center justify-center py-12">
               <div className="mb-4 h-16 w-16 rounded-full bg-green-500/10 flex items-center justify-center">
@@ -71,7 +87,7 @@ export default function ContactPage() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name Field */}
+        
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                   Name
@@ -87,7 +103,6 @@ export default function ContactPage() {
                 />
               </div>
 
-              {/* Email Field */}
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                   Email Address
@@ -103,7 +118,6 @@ export default function ContactPage() {
                 />
               </div>
 
-              {/* Message Field */}
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                   Message
@@ -119,18 +133,16 @@ export default function ContactPage() {
                 />
               </div>
 
-              {/* Error Message */}
               {error && (
                 <div className="rounded-lg bg-red-500/10 border border-red-500/30 p-3 text-red-600 text-sm">
                   {error}
                 </div>
               )}
 
-              {/* Submit Button */}
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full px-6 py-3  disabled:opacity-50 disabled:cursor-not-allowed bg-orange-500/10 border border-orange-500/30 rounded-lg text-orange-500 text-sm font-medium hover:bg-orange-500/20 hover:border-orange-500/50 transition-all duration-200 items-center justify-center gap-2"
+                className="w-full rounded-lg bg-orange-500 px-6 py-3 font-semibold text-white hover:bg-orange-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
               >
                 {loading ? (
                   <>
@@ -146,17 +158,17 @@ export default function ContactPage() {
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <div className="rounded-lg border border-border bg-[#121212] p-6 text-center">
+          <div className="rounded-lg border border-border bg-card p-6 text-center">
             <div className="mb-3 text-2xl">💬</div>
             <h3 className="mb-2 font-semibold text-foreground">Quick Response</h3>
             <p className="text-sm text-muted-foreground">We typically respond within 24 hours</p>
           </div>
-          <div className="rounded-lg border border-border bg-[#121212] p-6 text-center">
+          <div className="rounded-lg border border-border bg-card p-6 text-center">
             <div className="mb-3 text-2xl">🔒</div>
             <h3 className="mb-2 font-semibold text-foreground">Secure</h3>
             <p className="text-sm text-muted-foreground">Your information is safe and encrypted</p>
           </div>
-          <div className="rounded-lg border border-border bg-[#121212] p-6 text-center">
+          <div className="rounded-lg border border-border bg-card p-6 text-center">
             <div className="mb-3 text-2xl">⚡</div>
             <h3 className="mb-2 font-semibold text-foreground">Always Available</h3>
             <p className="text-sm text-muted-foreground">Contact us anytime, any day</p>
@@ -164,13 +176,9 @@ export default function ContactPage() {
         </div>
       </main>
 
+      <Footer />
+    </div>
+    </div>
     </div>
   )
 }
-
-
-
-
-
-
-
