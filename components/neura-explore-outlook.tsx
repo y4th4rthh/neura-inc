@@ -7,14 +7,14 @@ const previews = [
     id: 1,
     label: "Landing Page",
     tag: "Home",
-    description: "A clean, focused start page built for speed — jump into anything instantly.",
+    description: "A clean, focused start page built for speed, jump into anything instantly.",
     image: "/outlook-img/ne1.png",
   },
   {
     id: 2,
     label: "Multi-Tab",
     tag: "Tabs",
-    description: "Fluid multi-tab browsing with a minimal chrome — switch contexts without friction.",
+    description: "Fluid multi-tab browsing with a minimal chrome, switch contexts without friction.",
     image: "/outlook-img/ne2.png",
   },
   {
@@ -42,7 +42,7 @@ const previews = [
     id: 6,
     label: "Shortcuts & URLs",
     tag: "Power",
-    description: "Custom keyboard shortcuts and native URL commands for a true power-user workflow.",
+    description: "Annotated keyboard shortcuts and native URL commands for a true power-user workflow.",
     image: "/outlook-img/ne6.png",
   },
   {
@@ -56,14 +56,14 @@ const previews = [
     id: 8,
     label: "Browser History",
     tag: "History",
-    description: "Smart history view with search, filters, and AI-assisted session recall.",
+    description: "Search history view with easy clearing and session recall for seamless continuity.",
     image: "/outlook-img/ne8.png",
   },
   {
     id: 9,
     label: "Downloads",
     tag: "Files",
-    description: "A dedicated downloads tab to track, manage, and open files without leaving the browser.",
+    description: "A dedicated downloads tab for easy tracking and management of download log.",
     image: "/outlook-img/ne9.png",
   },
 ]
