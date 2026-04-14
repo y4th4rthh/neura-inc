@@ -158,7 +158,7 @@ export default function DemoPage() {
                 )}
 
                 <iframe
-                  src="https://dev-neura-ai.netlify.app"
+                  src="https://demo-neura-ai.netlify.app"
                   title="Neura.ai Chat Interface"
                   className="h-[800px] w-full border-0 block"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
