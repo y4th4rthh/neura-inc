@@ -126,7 +126,7 @@ export default function DemoPage() {
                       <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-orange-400" />
                     </span>
                     <span className="text-[11px] text-muted-foreground truncate">
-                      demo-neura.ai.netlify.app
+                      demo-neura-ai.netlify.app
                     </span>
                   </div>
                 </div>
