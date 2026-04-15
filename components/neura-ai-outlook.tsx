@@ -27,16 +27,16 @@ const previews = [
   {
     id: 4,
     label: "neura.swift.1.o",
-    tag: "Swift",
-    description: "Blazing-fast response mode optimized for high-throughput tasks and rapid iteration.",
-    image: "/outlook-img/nai-4.png",
+    tag: "Hybrid AI",
+    description: "Live web search fused with AI reasoning for real-time, grounded answers.",
+    image: "/outlook-img/nai-5.png",
   },
   {
     id: 5,
     label: "neura.swift.1.o",
-    tag: "Hybrid AI",
-    description: "Live web search fused with AI reasoning for real-time, grounded answers.",
-    image: "/outlook-img/nai-5.png",
+    tag: "Swift",
+    description: "Blazing-fast response mode optimized for high-throughput tasks and rapid iteration.",
+    image: "/outlook-img/nai-4.png",
   },
   {
     id: 6,
