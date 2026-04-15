@@ -150,9 +150,9 @@ export default function ChangelogsPage() {
   }
 
   return (
-    <div className="min-h-screen flex">
+    <div className="min-h-screen flex bg-[#121212]">
 
-      <div className="flex-1 flex flex-col relative bg-[#121212] rounded-xl overflow-hidden transition-[margin,border-radius] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+      <div className="flex-1 flex flex-col relative bg-[#121212] m-2 rounded-xl overflow-hidden transition-[margin,border-radius] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
         <style>{`
           .hide-scrollbar::-webkit-scrollbar { display: none; }
           @keyframes fadeUp {
