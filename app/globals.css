@@ -121,9 +121,7 @@ code, pre {
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-* {
-  overscroll-behavior: none;
-}
+
 
 @layer base {
   * {
