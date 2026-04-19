@@ -45,6 +45,10 @@ export default function DemoPage() {
 
       <div className="flex-1 flex flex-col h-[calc(100vh-16px)] relative m-2 bg-[#121212] rounded-xl border border-white/10 overflow-hidden transition-[margin,border-radius] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
         <style>{`
+            .over{
+        overscroll-behavior: none;
+      }
+
           .hide-scrollbar::-webkit-scrollbar { display: none; }
           @keyframes pulse-ring {
             0%   { transform: scale(0.95); opacity: 0.6; }
@@ -68,7 +72,7 @@ export default function DemoPage() {
         `}</style>
 
         <div
-          className="overflow-scroll hide-scrollbar"
+          className="overflow-scroll hide-scrollbar over"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           <main className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">

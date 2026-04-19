@@ -157,6 +157,10 @@ export default function ChangelogsPage() {
 
       <div className="flex-1 flex flex-col h-[calc(100vh-16px)] relative m-2 bg-[#121212] rounded-xl border border-white/10 overflow-hidden transition-[margin,border-radius] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
         <style>{`
+             .over{
+        overscroll-behavior: none;
+      }
+           
           .hide-scrollbar::-webkit-scrollbar { display: none; }
           @keyframes fadeUp {
             from { opacity: 0; transform: translateY(10px); }
@@ -168,7 +172,7 @@ export default function ChangelogsPage() {
           .release-card.active { border-color: rgba(249,115,22,0.25); box-shadow: 0 0 0 1px rgba(249,115,22,0.1); }
         `}</style>
 
-        <div className="overflow-scroll hide-scrollbar" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+        <div className="overflow-scroll hide-scrollbar over" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
 
           <div className="mx-auto text-center max-w-4xl px-4 pt-14 pb-10 sm:px-6 lg:px-8 fade-up">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs text-muted-foreground mb-5 tracking-widest uppercase">

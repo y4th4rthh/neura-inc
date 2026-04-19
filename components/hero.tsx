@@ -57,7 +57,7 @@ export default function Hero() {
             <span ><Zap size={36}/></span>
           </div>
 
-          <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight">Neura Ai</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight">Neura AI</h1>
 
           <p className="text-base md:text-2xl text-muted-foreground max-w-3xl mx-auto">
             Experience powerful AI tools designed for productivity. Chat, summarize, analyze, and create with
